@@ -1,0 +1,1 @@
+ bin/rails generate scaffold Store name:string address:string state:string url:string summary:text picture:binary
