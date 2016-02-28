@@ -64,12 +64,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :nashville
-    get "nashville/index"
+  match "/whitefish", to: "whitefish#index", :via => 'get'
+  match "/tupelo", to: "tupelo#index", :via => 'get'
+  match "/nashville", to: "nashville#index", :via => 'get'
 
-  resources :whitefish
-    get "whitefish/index"
-
-  resources :tupelo
-    get "tupelo/index"
 end
