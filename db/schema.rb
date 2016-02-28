@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214193302) do
+ActiveRecord::Schema.define(version: 20160215135634) do
 
   create_table "stores", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 20160214193302) do
     t.binary   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "phone"
+    t.string   "email"
+    t.string   "hours"
   end
 
 end
