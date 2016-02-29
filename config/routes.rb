@@ -68,4 +68,12 @@ Rails.application.routes.draw do
   match "/tupelo", to: "tupelo#index", :via => 'get'
   match "/nashville", to: "nashville#index", :via => 'get'
 
+  match "/whitefish/experience", to: "whitefish#experience", :via => 'get'
+  match "/whitefish/explore", to: "whitefish#explore", :via => 'get'
+  match "/whitefish/contact", to: "whitefish#contact", :via => 'get'
+
+
+  #get '/whitefish/experience', :to => redirect('/whitefish/experience.html')
+
+
 end
