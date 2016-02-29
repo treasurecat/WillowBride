@@ -1,19 +1,6 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12 header">
-			<%= link_to image_tag("ham.png", :border => 0, :alt => "Menu"), "#whitefish-menu", :class => 'menu' %>
-
-			<nav id="whitefish-menu">
-			   <ul>
-			      <li><%= link_to "Whitefish, MT", whitefish_path, :class => 'city-title' %></li>
-			      <li><%= link_to "The Experience", whitefish_experience_path, :class => 'city-title' %></li>
-			      <li><%= link_to "Explore Dresses", whitefish_explore_path, :class => 'city-title' %></li>
-			      <li><%= link_to "Contact", whitefish_contact_path, :class => 'city-title' %></li>
-			   </ul>
-			</nav>
-			<%= image_tag("willow_bride_logo.png", :alt => "Willow Bride", :width => "363", :height => "70", :class => "logo") %>
-		</div>
-	</div>
+	
+	<%= render partial: "nav" %>
 
 	<div class="row">
 		<div class="col-xs-12">
@@ -90,6 +77,10 @@
 				</div>
 				<div class="col-xs-4">
 					<h4>Connect</h4>
+					<a href="https://www.instagram.com/willowbride/" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.facebook.com/willowbridemt" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/willowbride" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.pinterest.com/WillowBrideWF/" target="_blank"><i class="fa fa-pinterest"></i></a>
 				</div>
 			</div>
 		</div>
@@ -97,24 +88,5 @@
 
 </div>
 
-<div class="row other-stores">
-	<div class="col-xs-6">
-		<%= link_to "Tupelo, Mississippi", tupelo_path, :class => 'city-title' %>
-		<%= link_to "Get Started", tupelo_path, :class => 'get-started' %>
-	</div>
-	<div class="col-xs-6">
-		<%= link_to "Nashville, Tennessee", nashville_path, :class => 'city-title' %>
-		<%= link_to "Get Started", nashville_path, :class => 'get-started' %>
-	</div>
-</div>
-<div class="row bottom-nav">
-	<div class="col-xs-4">
-		<li><%= link_to "The Experience", whitefish_experience_path, :class => 'city-title' %></li>
-	</div>
-	<div class="col-xs-4">
-      <li><%= link_to "Explore Dresses", whitefish_explore_path, :class => 'city-title' %></li>
-	</div>
-	<div class="col-xs-4">
-    <li><%= link_to "Contact", whitefish_contact_path, :class => 'city-title' %></li>
-	</div>
-</div>
+<%= render partial: "footer" %>
+

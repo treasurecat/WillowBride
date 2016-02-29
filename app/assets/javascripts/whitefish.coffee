@@ -6,7 +6,7 @@ ready = ->
 	$('html').removeAttr( 'class' )
 	$.mmenu.glbl = false
 
-	$('#whitefish-menu').mmenu {}, {}
+	$('#whitefish-menu').mmenu { onClick: close: true }, {}
 	return
 
 $(document).ready(ready)

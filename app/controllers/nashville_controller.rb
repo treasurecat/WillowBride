@@ -1,4 +1,17 @@
 class NashvilleController < ApplicationController
-  def index
+   def index
+  	@store = Store.find_by_name("Nashville, Tennessee")
+  end
+
+  def experience
+  	@store = Store.find_by_name("Nashville, Tennessee")
+  end
+
+  def explore
+  	@store = Store.find_by_name("Nashville, Tennessee")
+  end
+
+  def contact
+  	@store = Store.find_by_name("Nashville, Tennessee")
   end
 end

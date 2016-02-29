@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-xs-12 header">
+		<%= link_to image_tag("ham.png", :border => 0, :alt => "Menu"), "#whitefish-menu", :class => 'menu' %>
+
+		<nav id="whitefish-menu">
+		   <ul>
+		   	  <li><%= link_to "Willow Bride", root_path, :class => 'city-title' %></li>
+		      <li><%= link_to "Location", whitefish_path, :class => 'city-title' %></li>
+		      <li><%= link_to "The Experience", whitefish_experience_path, :class => 'city-title' %></li>
+		      <li><%= link_to "Explore Dresses", whitefish_explore_path, :class => 'city-title' %></li>
+		      <li><%= link_to "Contact", whitefish_contact_path, :class => 'city-title' %></li>
+		   </ul>
+		</nav>
+
+		<%= link_to(root_path) do %>
+			<%= image_tag("willow_bride_logo.png", :alt => "Willow Bride", :width => "363", :height => "70", :class => "logo") %>
+		<% end %>
+	</div>
+</div>
