@@ -79,6 +79,18 @@ $lightgrey: #949DA3;
 	width: 99% !important;
 }
 
+.page-container {
+	position: relative;
+	min-height: 100%;
+}
+
+html, 
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 body {
 	font-family: $body-font;
 	color: $blackish;
@@ -334,6 +346,14 @@ a.city-title:hover {
     text-align: center;
     font-size: .95em;
 	}
+}
+
+#footer-bottom {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+  height:352px;
+  overflow: hidden;
 }
 
 .other-stores {
