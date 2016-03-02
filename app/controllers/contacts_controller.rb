@@ -11,9 +11,11 @@ class ContactsController < ApplicationController
         format.html { redirect_to whitefish_contact_path, notice: 'Thank you for your message. We will contact you soon!' }
         format.json
       end
-      #flash.now[:error] = 'Thank you for your message. We will contact you soon!'
     else
-      flash.now[:error] = 'Cannot send message.'
+      respond_to do |format|
+        format.html { redirect_to whitefish_contact_path, notice: 'Cannot send message.' }
+        format.json
+      end
       render :new
     end
   end

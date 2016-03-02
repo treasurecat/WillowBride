@@ -1,23 +1,25 @@
 <div class="container">
+  
+  <%= render partial: "nav" %>
 
-	<%= render partial: "nav" %>
-
-	<div class="row">
-		<div class="col-xs-12">
-			<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-        <%= f.input :name, :required => true %>
-        <%= f.input :email, :required => true %>
-        <%= f.input :message, :as => :text, :required => true %>
+  <div class="row">
+    <div class="col-xs-12 contact-form">
+      <div id="flash">
+        <%if notice.present? %>
+          <%= render partial: "shared/notice_banner" %>
+        <% end %>
+      </div>
+      <%= bootstrap_form_for Contact.new, layout: :horizontal, label_col: "col-xs-3", control_col: "col-xs-9" do |f| %>
+        <%= f.text_field :name, :required => true, label_class: "label" %>
+        <%= f.text_field :email, :required => true, label_class: "label" %>
+        <%= f.text_area :message, :as => :text, :required => true, label_class: "label" %>
         <div class= "hidden">
-          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
         </div>
-        <div>
-          </br>
-          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-        </div>
+        <%= f.submit "SEND", :class => 'pull-right btn submit' %>
       <% end %>
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 
 <%= render partial: "footer" %>
