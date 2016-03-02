@@ -13,5 +13,8 @@ class NashvilleController < ApplicationController
 
   def contact
   	@store = Store.find_by_name("Nashville, Tennessee")
+
+    @contact = Contact.new(params[:contact])
   end
+
 end

@@ -14,6 +14,7 @@
  *= require_self
  *= require jquery.mmenu
  *= require font-awesome
+ *= require rails_bootstrap_forms
  */
 
 @import "bootstrap-sprockets";
@@ -75,6 +76,28 @@ $lightgrey: #949DA3;
 	padding-right: 30px !important;
 }
 
+.contact-form {
+	margin: 0px auto;
+	text-align: center;
+	max-width: 600px;
+	float: none !important;
+
+	.label {
+	  text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin: .5em 0;
+    font-family: "brandon-grotesque", sans-serif;
+    letter-spacing: .2em;
+    font-size: 1.25em;
+    color: #565656 !important;
+	}
+
+	.submit {
+		margin-right: 1em;
+	}
+}
+
 .container {
 	width: 99% !important;
 }
@@ -117,13 +140,14 @@ a:hover {
 	margin: 4em;
 }
 
-a.btn {
+.btn {
 	text-transform: uppercase;
 	font-family: $h1-font;
 	letter-spacing: .2em;
 	font-size: 1.15em;
 	border: 1px solid $gold;
 	padding: 1.5em 1.75em;
+	background-color: #fff;
 
 	-webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
@@ -133,7 +157,7 @@ a.btn {
   outline: none !important;
 }
 
-a.btn:hover {
+.btn:hover {
   background-color: $gold;
   color: white;
 }
@@ -335,7 +359,8 @@ a.city-title:hover {
 	}
 
 	.fa-instagram, .fa-facebook, .fa-twitter, .fa-pinterest {
-    margin: 0 .5em;
+    margin: 0 .25em .5em;
+    padding-left: .15em;
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -391,6 +416,38 @@ a.city-title:hover {
 		}
 	}
 }
+
+.hidden { display: none; }
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
 
 @media (max-width: 768px) {
 	.experience h2,

@@ -81,7 +81,8 @@ Rails.application.routes.draw do
   match "/nashville/contact", to: "nashville#contact", :via => 'get'
 
 
-  #get '/whitefish/experience', :to => redirect('/whitefish/experience.html')
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources "contacts", only: [:new, :create]
 
 
 end
