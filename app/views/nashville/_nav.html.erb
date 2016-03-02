@@ -1,19 +1,21 @@
 <div class="row">
-	<div class="col-xs-12 header">
-		<%= link_to image_tag("ham.png", :border => 0, :alt => "Menu"), "#nashville-menu", :class => 'menu' %>
+	<div class="col-xs-12">
+		<div class="col-xs-12 header">
+			<%= link_to image_tag("ham.png", :border => 0, :alt => "Menu"), "#nashville-menu", :class => 'menu pull-left' %>
 
-		<nav id="nashville-menu">
-		   <ul>
-		   	  <li><%= link_to "Willow Bride", root_path, :class => 'city-title' %></li>
-		      <li><%= link_to "Location", nashville_path, :class => 'city-title' %></li>
-		      <li><%= link_to "The Experience", nashville_experience_path, :class => 'city-title' %></li>
-		      <li><%= link_to "Explore Dresses", nashville_explore_path, :class => 'city-title' %></li>
-		      <li><%= link_to "Contact", nashville_contact_path, :class => 'city-title' %></li>
-		   </ul>
-		</nav>
+			<nav id="nashville-menu">
+			   <ul>
+			   	  <li><%= link_to "Willow Bride", root_path, :class => 'city-title' %></li>
+			      <li><%= link_to "Location", nashville_path, :class => 'city-title' %></li>
+			      <li><%= link_to "The Experience", nashville_experience_path, :class => 'city-title' %></li>
+			      <li><%= link_to "Explore Dresses", nashville_explore_path, :class => 'city-title' %></li>
+			      <li><%= link_to "Contact", nashville_contact_path, :class => 'city-title' %></li>
+			   </ul>
+			</nav>
 
-		<%= link_to(root_path) do %>
-			<%= image_tag("willow_bride_logo.png", :alt => "Willow Bride", :width => "363", :height => "70", :class => "logo") %>
-		<% end %>	
+			<%= link_to(root_path) do %>
+				<%= image_tag("willow_bride_logo.png", :alt => "Willow Bride", :width => "363", :height => "70", :class => "logo") %>
+			<% end %>	
+		</div>
 	</div>
 </div>
