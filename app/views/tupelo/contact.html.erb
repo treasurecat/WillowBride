@@ -16,7 +16,9 @@
         <div class= "hidden">
           <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
         </div>
-        <%= f.submit "SEND", :class => 'pull-right btn submit' %>
+        <div class="col-xs-9 pull-right submit-holder">
+          <%= f.submit "SEND", :class => 'btn submit' %>
+        </div>      
       <% end %>
     </div>
   </div>
