@@ -1,34 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @store.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @store.address %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @store.name %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @store.state %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @store.address %>
+  </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @store.url %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @store.state %>
+  </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @store.summary %>
-</p>
+  <p>
+    <strong>Url:</strong>
+    <%= @store.url %>
+  </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @store.picture %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @store.phone %>
+  </p>
 
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+  <p>
+    <strong>Email:</strong>
+    <%= @store.email %>
+  </p>
+
+  <p>
+    <strong>Hours:</strong>
+    <%= @store.hours %>
+  </p>
+
+  <p>
+    <strong>Summary:</strong>
+    <%= @store.summary %>
+  </p>
+
+  <p>
+    <strong>Picture:</strong>
+    <%= @store.picture %>
+  </p>
+
+  <%= link_to 'Edit', edit_store_path(@store) %> |
+  <%= link_to 'Back', stores_path %>
+  
+</div>

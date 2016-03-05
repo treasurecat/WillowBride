@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WillowBride</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://use.typekit.net/mdx2jvk.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+<% if params[:controller] != "welcome" %>
+  <div class="page-container">
+<% end %>
 
-<%= yield %>
+		<%= yield %>
 
+<% if params[:controller] != "welcome" %>
+  </div>
+<% end %>
+	
 </body>
 </html>

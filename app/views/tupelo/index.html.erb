@@ -1,2 +1,89 @@
-<h1>Tupelo#index</h1>
-<p>Find me in app/views/tupelo/index.html.erb</p>
+<div class="container">
+	
+	<%= render partial: "nav" %>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="col-xs-12 col-md-6">
+				<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+			</div>
+			<div class="col-xs-12 col-md-6 location-info">
+				<h3 class="city-title"><%= @store.name %></h3>
+				<p><%= @store.summary %></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="col-xs-12">
+				<div class="col-xs-12 appointment-info">
+					<h3>All dresses are shown by appointment</h3>
+					<h3>Book today so we can introduce ourselves</h3>
+					<a href="https://www.schedulicity.com/scheduling/WBV7B4" class="btn">Book an appointment</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<%= link_to(tupelo_experience_path) do %>
+				<div class="col-xs-12 col-sm-6 experience">
+						<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+					<div class="label-holder">
+						<h2>The Experience</h2>
+						<span class="arrow-a">
+						  <span class="arrow-circle"><span class="glyphicon glyphicon-menu-right arrow"></span></span>
+						</span>
+					</div>
+				</div>
+			<% end %>
+
+			<%= link_to(tupelo_explore_path) do %>
+				<div class="col-xs-12 col-sm-6 dresses">
+						<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+					<div class="label-holder">
+						<h2>Explore Dresses</h2>
+						<span class="arrow-a">
+						  <span class="arrow-circle"><span class="glyphicon glyphicon-menu-right arrow"></span></span>
+						</span>
+					</div>
+				</div>
+			<% end %>
+
+		</div>
+	</div>
+
+	<div class="row footer">
+		<div class="col-xs-12">
+			<div class="col-xs-12">
+				<div class="col-xs-12 footer-header">
+					<%= image_tag("willow_bride_logo_sm.png", :alt => "Willow Bride", :width => "200", :height => "49", :class => "sm_logo") %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">
+					<h4>Questions?</h4>
+					<a href="mailto:<%= @store.email %>" class="email">Email Us</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<h4>Visit</h4>
+					<p><%= @store.address %></p>
+					<p><%= @store.name %></p>
+					<p><%= @store.phone %></p>
+
+					<h4>Store Hours</h4>
+					<p class="hours"><%= @store.hours %></p>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<h4>Connect</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<%= render partial: "footer" %>
+
