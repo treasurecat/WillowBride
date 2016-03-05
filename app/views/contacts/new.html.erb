@@ -1,0 +1,25 @@
+<div class="container">
+
+  <%= render partial: "nav" %>
+
+  <div class="row">
+    <div class="col-xs-12">
+       <%# if notice.present? %>
+        <%= render partial: "shared/notice_banner" %>
+      <% #end %>
+      <!--, remote: true-->
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' }, remote: true do |f| %>
+        <%= f.input :name, :required => true %>
+        <%= f.input :email, :required => true %>
+        <%= f.input :message, :as => :text, :required => true %>
+        <div class= "hidden">
+          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+        </div>
+        <div>
+          </br>
+          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
