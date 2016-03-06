@@ -121,6 +121,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+p {
+	font-size: .75em;
+}
+
 .row {
 	margin: 4em;
 }
@@ -312,7 +316,6 @@ a.city-title:hover {
 		border-bottom: 1px solid $grey;
 	}
 	.hours {
-		max-width: 100px;
 		margin: 0px auto;
 		text-align: center;
 		line-height: 2em;
@@ -334,6 +337,7 @@ a.city-title:hover {
 	p {
 		font-family: $h1-font;
 		text-transform: uppercase;
+		font-size: .75em;
 	}
 
 	.fa-instagram, .fa-facebook, .fa-twitter, .fa-pinterest {
