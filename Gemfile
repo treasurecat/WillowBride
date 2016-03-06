@@ -60,5 +60,9 @@ group :development, :test do
 	gem 'sqlite3'
 end
 
+group :production, :staging do
+  gem "pg"
+end
+
 ruby "2.2.3"
 
