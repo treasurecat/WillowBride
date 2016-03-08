@@ -9,6 +9,8 @@
       raw(simple_format(h(value)))
     when Time, DateTime, Date
       I18n.l(value)
+    when attribute == 'recipient'
+
     else
       value
     end
@@ -25,6 +27,8 @@
       content_tag(:ul, raw(list), :style => "list-style:none;")
     elsif value.is_a?(String)
       value
+    elsif attribute == 'recipient'
+
     else
       value.inspect
     end
