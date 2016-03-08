@@ -2,8 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
-  $('.wysihtml5').each (i, elem) ->
+ready = ->
+	$('.wysihtml5').each (i, elem) ->
     $(elem).wysihtml5 'toolbar':
       'blockquote': false
       'html': false
@@ -18,6 +18,6 @@ $(document).ready ->
       'emphasis': false
     return
   return
-$(document).on 'page:load', ->
-  window['rangy'].initialized = false
-  return
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
