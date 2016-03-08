@@ -68,12 +68,11 @@
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<h4>Visit</h4>
-					<p><%= @store.address %></p>
-					<p><%= @store.name %></p>
+					<p><%= @store.address.html_safe %></p>
 					<p><%= @store.phone %></p>
 
 					<h4>Store Hours</h4>
-					<p class="hours"><%= @store.hours %></p>
+					<p class="hours"><%= @store.hours.html_safe %></p>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<h4>Connect</h4>

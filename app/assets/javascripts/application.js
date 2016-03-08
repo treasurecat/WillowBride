@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery.mmenu
 //= require bootstrap-sprockets
+//= require bootstrap-wysihtml5
 
 //= require_tree .
 

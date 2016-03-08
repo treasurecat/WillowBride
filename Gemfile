@@ -34,6 +34,8 @@ gem 'bootstrap_form'
 
 gem 'rails_12factor', group: :production
 
+gem 'bootstrap-wysihtml5-rails'
+
 # Figaro adds application.yml for secure env vars
 gem 'figaro'
 
