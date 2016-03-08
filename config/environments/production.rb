@@ -70,12 +70,11 @@ Rails.application.configure do
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.sendgrid.com",
+   :address              => "smtp.gmail.com",
    :port                 => 587,
-   :user_name            => ENV['SENDGRID_USERNAME'],
-   :password             => ENV['SENDGRID_PASSWORD'],
+   :user_name            => ENV['username'],
+   :password             => ENV['password'],
    :authentication       => "plain",
-   :domain               => 'heroku.com'
    :enable_starttls_auto => true
   }
 
