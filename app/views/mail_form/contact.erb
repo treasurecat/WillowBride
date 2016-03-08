@@ -1,7 +1,7 @@
 <h4 class="city-title"><%= message.subject %></h4>
 
 <% @resource.mail_form_attributes.each do |attribute, value|
-  next if value.blank? || attribute == 'contact_recipient' %>
+  next if value.blank? || @resource.class.human_attribute_name(attribute) == 'Recipient' %>
 
   <p><b><%= @resource.class.human_attribute_name(attribute) %>:</b>
   <%= case value
