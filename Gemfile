@@ -34,6 +34,9 @@ gem 'bootstrap_form'
 
 gem 'rails_12factor', group: :production
 
+# Figaro adds application.yml for secure env vars
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
