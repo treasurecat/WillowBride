@@ -1,4 +1,4 @@
-<h4 style="text-decoration:underline"><%= message.subject %></h4>
+<h4 class="city-title"><%= message.subject %></h4>
 
 <% @resource.mail_form_attributes.each do |attribute, value|
   next if value.blank? %>
@@ -16,7 +16,7 @@
 <% end %>
 
 <% unless @resource.class.mail_appendable.blank? %>
-  <br /><h4 style="city-title"><%= I18n.t :title, :scope => [ :mail_form, :request ], :default => 'Request information' %></h4>
+  <br /><h4 class="city-title"><%= I18n.t :title, :scope => [ :mail_form, :request ], :default => 'Request information' %></h4>
 
   <% @resource.class.mail_appendable.each do |attribute|
     value = @resource.request.send(attribute)
