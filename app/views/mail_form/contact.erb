@@ -1,7 +1,7 @@
 <h4 class="city-title"><%= message.subject %></h4>
 
 <% @resource.mail_form_attributes.each do |attribute, value|
-  next if value.blank? %>
+  next if value.blank? || attribute == 'contact_recipient' %>
 
   <p><b><%= @resource.class.human_attribute_name(attribute) %>:</b>
   <%= case value
@@ -9,8 +9,6 @@
       raw(simple_format(h(value)))
     when Time, DateTime, Date
       I18n.l(value)
-    when attribute == 'recipient'
-
     else
       value
     end
@@ -27,8 +25,6 @@
       content_tag(:ul, raw(list), :style => "list-style:none;")
     elsif value.is_a?(String)
       value
-    elsif attribute == 'recipient'
-
     else
       value.inspect
     end
