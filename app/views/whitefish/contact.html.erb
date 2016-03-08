@@ -15,6 +15,7 @@
         <%= f.text_area :message, :as => :text, :required => true, label_class: "label" %>
         <div class= "hidden">
           <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+          <%= f.text_field :recipient, :value => 'heather.l.allaman@vanderbilt.edu' %>
         </div>
         <div class="col-xs-9 pull-right submit-holder">
           <%= f.submit "SEND", :class => 'btn submit' %>
