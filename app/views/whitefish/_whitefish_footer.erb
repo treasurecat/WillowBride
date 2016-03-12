@@ -1,0 +1,30 @@
+<div class="row footer">
+	<div class="col-xs-12">
+		<div class="col-xs-12">
+			<div class="col-xs-12 footer-header">
+				<%= image_tag("willow_bride_logo_sm.png", :alt => "Willow Bride", :width => "200", :height => "49", :class => "sm_logo") %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<h4>Questions?</h4>
+				<a href="mailto:<%= @store.email %>" class="email">Email Us</a>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<h4>Visit</h4>
+				<p><%= @store.address.html_safe %></p>
+				<p><%= @store.phone %></p>
+
+				<h4>Store Hours</h4>
+				<p class="hours"><%= @store.hours.html_safe %></p>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<h4>Connect</h4>
+				<a href="https://www.instagram.com/willowbride/" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.facebook.com/willowbridemt" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/willowbride" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.pinterest.com/WillowBrideWF/" target="_blank"><i class="fa fa-pinterest"></i></a>
+			</div>
+		</div>
+	</div>
+</div>

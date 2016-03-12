@@ -170,6 +170,19 @@ p {
 	color: $blackish !important;
 }
 
+.left-title {
+	text-transform: uppercase;
+	display: block;
+	text-align: left;
+	margin: 1em auto .5em;
+	line-height: 1.5em;
+
+	font-family: $h1-font;
+	letter-spacing: $h1-letter-sp;
+	font-size: $h1-font-size;
+	color: $blackish !important;
+}
+
 a.city-title:hover {
 	text-decoration: none;
 }
@@ -299,7 +312,21 @@ a.city-title:hover {
 	.arrow {
 		color: $gold;
 	}
+
+	p {
+		font-family: $body-font;
+		line-height: 2em;
+		padding: 1em 2em 0 0;
+		font-size: 1.15em;
+		animation: fadein 1s;
+
+	}
+
+	.experience-img {
+		padding-top: 2em;
+	}
 }
+
 
 
 
