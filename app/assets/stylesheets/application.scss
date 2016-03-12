@@ -21,8 +21,8 @@
 @import "bootstrap";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 
-$h1-font: "brandon-grotesque", sans-serif;
-$body-font: "garamond-premier-pro-display", sans-serif;
+$sans-font: "brandon-grotesque", sans-serif;
+$serif-font: "garamond-premier-pro-display", sans-serif;
 $gold: #D1A66C;
 $blackish: #565656;
 $grey: #F7F7F7;
@@ -83,7 +83,7 @@ body {
 }
 
 body {
-	font-family: $body-font;
+	font-family: $serif-font;
 	color: $blackish;
 	font-size: 1.5em;
 	letter-spacing: .1em;
@@ -112,9 +112,13 @@ p {
 	margin: 4em;
 }
 
+.row.no-bottom {
+	margin: 4em 0 0 0;
+}
+
 .btn {
 	text-transform: uppercase;
-	font-family: $h1-font;
+	font-family: $sans-font;
 	letter-spacing: $h1-letter-sp;
 	font-size: $h1-font-size;
 	border: 2px solid $gold;
@@ -164,7 +168,7 @@ p {
 	margin: 1em auto .5em;
 	line-height: 1.5em;
 
-	font-family: $h1-font;
+	font-family: $sans-font;
 	letter-spacing: $h1-letter-sp;
 	font-size: $h1-font-size;
 	color: $blackish !important;
@@ -177,7 +181,7 @@ p {
 	margin: 1em auto .5em;
 	line-height: 1.5em;
 
-	font-family: $h1-font;
+	font-family: $sans-font;
 	letter-spacing: $h1-letter-sp;
 	font-size: $h1-font-size;
 	color: $blackish !important;
@@ -191,6 +195,11 @@ a.city-title:hover {
 	display: block;
 	text-align: center;
 	padding-top: .5em;
+}
+
+.menu {
+	position: absolute;
+  left: 0;
 }
 
 .menu img {
@@ -225,7 +234,7 @@ a.city-title:hover {
 		margin-bottom: 1.5em;
 	}
 	p {
-		font-family: $body-font;
+		font-family: $serif-font;
 		line-height: 2em;
 		padding: 0 1em;
 		font-size: $h1-font-size;
@@ -269,7 +278,7 @@ a.city-title:hover {
 		padding: 2em;
 		margin: 0 auto 0 0;
 
-		font-family: $h1-font;
+		font-family: $sans-font;
 		letter-spacing: $h1-letter-sp;
 		font-size: $h1-font-size;
 		line-height: 1.45em;
@@ -314,7 +323,7 @@ a.city-title:hover {
 	}
 
 	p {
-		font-family: $body-font;
+		font-family: $serif-font;
 		line-height: 2em;
 		padding: 1em 2em 0 0;
 		font-size: 1.15em;
@@ -328,6 +337,24 @@ a.city-title:hover {
 }
 
 
+.designers {
+	.designer {
+		color: $blackish;
+		text-transform: uppercase;
+		display: block;
+		text-align: center;
+		padding: .5em 0;
+		font-family: $sans-font;
+	}
+
+	.coming-soon {
+		color: $gold;
+		text-transform: uppercase;
+		text-align: center; 
+		padding: 6em 0 0 0;
+		font-size: 1em;
+	}
+}
 
 
 .footer {
@@ -355,12 +382,12 @@ a.city-title:hover {
 	.email {
 		text-transform: uppercase;
 		letter-spacing: .1em;
-		font-family: $h1-font;
+		font-family: $sans-font;
 		font-size: $h1-font-size;
 	}
 
 	p {
-		font-family: $h1-font;
+		font-family: $sans-font;
 		text-transform: uppercase;
 		font-size: .75em;
 	}

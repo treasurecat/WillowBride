@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="col-xs-12 col-md-6">
-				<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+				<%= image_tag("tupelo_shop.png", :alt => "Tupelo, MS", :class => "location-img") %>
 			</div>
 			<div class="col-xs-12 col-md-6 location-info">
 				<h3 class="city-title"><%= @store.name %></h3>
@@ -30,7 +30,7 @@
 		<div class="col-xs-12">
 			<%= link_to(tupelo_experience_path) do %>
 				<div class="col-xs-12 col-sm-6 experience">
-						<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+						<%= image_tag("tupelo_experience.png", :alt => "Tupelo, MS", :class => "location-img") %>
 					<div class="label-holder">
 						<h2>The Experience</h2>
 						<span class="arrow-a">
@@ -42,7 +42,7 @@
 
 			<%= link_to(tupelo_explore_path) do %>
 				<div class="col-xs-12 col-sm-6 dresses">
-						<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+						<%= image_tag("tupelo_gallery.png", :alt => "Tupelo, MS", :class => "location-img") %>
 					<div class="label-holder">
 						<h2>Explore Dresses</h2>
 						<span class="arrow-a">
@@ -54,37 +54,9 @@
 
 		</div>
 	</div>
-
-	<div class="row footer">
-		<div class="col-xs-12">
-			<div class="col-xs-12">
-				<div class="col-xs-12 footer-header">
-					<%= image_tag("willow_bride_logo_sm.png", :alt => "Willow Bride", :width => "200", :height => "49", :class => "sm_logo") %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-4">
-					<h4>Questions?</h4>
-					<a href="mailto:<%= @store.email %>" class="email">Email Us</a>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<h4>Visit</h4>
-					<p><%= @store.address.html_safe %></p>
-					<p><%= @store.phone %></p>
-
-					<h4>Store Hours</h4>
-					<p class="hours"><%= @store.hours.html_safe %></p>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<h4>Connect</h4>
-					<a href="https://www.instagram.com/willowbridems/" target="_blank"><i class="fa fa-instagram"></i></a>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-
 </div>
+
+<%= render partial: "tupelo_footer" %>
 
 <%= render partial: "footer" %>
 
