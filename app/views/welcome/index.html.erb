@@ -5,20 +5,26 @@
 </div>
 
 <div class="row">
-	<div class="col-xs-12 col-sm-4">
-		<%= link_to image_tag("whitefish_home_hero.png", :border => 0, :alt => "Whitefish, Montana"), whitefish_path, :class => '' %>
+	<div class="col-xs-12 col-sm-4 first">
+		<div class="home-img-container">
+			<%= link_to image_tag("whitefish_home_hero.png", :border => 0, :alt => "Whitefish, Montana"), whitefish_path, :class => 'first' %>
+		</div>
 		<%= link_to "Whitefish, Montana", whitefish_path, :class => 'city-title' %>
 		<%= link_to "Get Started", whitefish_path, :class => 'get-started' %>
 
 	</div>
-	<div class="col-xs-12 col-sm-4">
-		<%= link_to image_tag("tupelo_home_hero.png", :border => 0, :alt => "Tupelo, Mississippi"), tupelo_path, :class => '' %>
+	<div class="col-xs-12 col-sm-4 second">
+		<div class="home-img-container">
+			<%= link_to image_tag("tupelo_home_hero.png", :border => 0, :alt => "Tupelo, Mississippi"), tupelo_path, :class => 'second' %>
+		</div>
 		<%= link_to "Tupelo, Mississippi", tupelo_path, :class => 'city-title' %>
 		<%= link_to "Get Started", tupelo_path, :class => 'get-started' %>
 
 	</div>
-	<div class="col-xs-12 col-sm-4">
-		<%= link_to image_tag("nashville_home_hero.png", :border => 0, :alt => "Nashville, Tennessee"), nashville_path, :class => '' %>
+	<div class="col-xs-12 col-sm-4 third">
+		<div class="home-img-container">
+			<%= link_to image_tag("nashville_home_hero.png", :border => 0, :alt => "Nashville, Tennessee"), nashville_path, :class => 'third' %>
+		</div>
 		<%= link_to "Nashville, Tennessee", nashville_path, :class => 'city-title' %>
 		<%= link_to "Get Started", nashville_path, :class => 'get-started' %>
 

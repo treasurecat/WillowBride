@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="col-xs-12 col-md-6">
-				<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+				<%= image_tag("whitefish_shop.png", :alt => "Whitefish, MT", :class => "location-img") %>
 			</div>
 			<div class="col-xs-12 col-md-6 location-info">
 				<h3 class="city-title"><%= @store.name %></h3>
@@ -20,7 +20,7 @@
 				<div class="col-xs-12 appointment-info">
 					<h3>All dresses are shown by appointment</h3>
 					<h3>Book today so we can introduce ourselves</h3>
-					<a href="https://www.schedulicity.com/scheduling/WBV7B4" class="btn">Book an appointment</a>
+					<a href="<%= @store.url %>" target="_blank" class="btn">Book an appointment</a>
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 		<div class="col-xs-12">
 			<%= link_to(whitefish_experience_path) do %>
 				<div class="col-xs-12 col-sm-6 experience">
-					<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+					<%= image_tag("whitefish_experience.png", :alt => "Whitefish, MT", :class => "location-img") %>
 					<div class="label-holder">
 						<h2>The Experience</h2>
 						<span class="arrow-a">
@@ -42,7 +42,7 @@
 
 			<%= link_to(whitefish_explore_path) do %>
 				<div class="col-xs-12 col-sm-6 dresses">
-					<%= image_tag("whitefish_placeholder.png", :alt => "Whitefish, MT", :class => "location-img") %>
+					<%= image_tag("whitefish_gallery.png", :alt => "Whitefish, MT", :class => "location-img") %>
 					<div class="label-holder">
 						<h2>Explore Dresses</h2>
 						<span class="arrow-a">
@@ -53,40 +53,9 @@
 			<% end %>
 		</div>
 	</div>
-
-	<div class="row footer">
-		<div class="col-xs-12">
-			<div class="col-xs-12">
-				<div class="col-xs-12 footer-header">
-					<%= image_tag("willow_bride_logo_sm.png", :alt => "Willow Bride", :width => "200", :height => "49", :class => "sm_logo") %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-4">
-					<h4>Questions?</h4>
-					<a href="mailto:<%= @store.email %>" class="email">Email Us</a>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<h4>Visit</h4>
-					<p><%= @store.address %></p>
-					<p><%= @store.name %></p>
-					<p><%= @store.phone %></p>
-
-					<h4>Store Hours</h4>
-					<p class="hours"><%= @store.hours %></p>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<h4>Connect</h4>
-					<a href="https://www.instagram.com/willowbride/" target="_blank"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/willowbridemt" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/willowbride" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a href="https://www.pinterest.com/WillowBrideWF/" target="_blank"><i class="fa fa-pinterest"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
 </div>
+	
+<%= render partial: "whitefish_footer" %>
 
 <%= render partial: "footer" %>
 
