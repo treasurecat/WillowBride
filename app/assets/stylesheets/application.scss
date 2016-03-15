@@ -162,6 +162,7 @@ p {
 		max-width: 363px;
 		animation: pulse 1s;
 		align-items: center;
+		height: 100%;
 	}
 
 	.menu {
@@ -578,10 +579,6 @@ a.city-title:hover {
 
 		.menu img {
 			max-width: 35px;
-		}
-
-		.logo {
-			height: 100%;
 		}
 	}
 }
