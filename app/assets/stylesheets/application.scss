@@ -55,6 +55,15 @@ $h1-letter-sp: .2em;
   }
 }
 
+@keyframes pulse-background {
+  0% {
+    background-color: #f7f7f7;
+  }
+  100% {
+    background-color: #fdfdfd;
+  }
+}
+
 /** bootstrap overrides **/
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
 	padding-left: 30px !important;
@@ -69,11 +78,11 @@ $h1-letter-sp: .2em;
 	width: 99% !important;
 }
 
-.page-container {
-	position: relative;
-	min-height: 100%;
-	padding-bottom: 400px;
-}
+// .page-container {
+// 	position: relative;
+// 	min-height: 100%;
+// 	padding-bottom: 400px;
+// }
 
 html, 
 body {
@@ -142,10 +151,26 @@ p {
 	text-align: center;
 	margin: 0em auto;
 	position: relative;
+	display: flex;
+	justify-content: center;
+
+	> a {
+		margin: 0px auto;
+	}
 
 	.logo {
 		max-width: 363px;
 		animation: pulse 1s;
+		align-items: center;
+	}
+
+	.menu {
+		align-self: flex-start;
+		position: absolute;
+	}
+
+	.menu img {
+		max-width: 45px;
 	}
 }
 
@@ -197,14 +222,7 @@ a.city-title:hover {
 	padding-top: .5em;
 }
 
-.menu {
-	position: absolute;
-  left: 0;
-}
 
-.menu img {
-	max-width: 50px;
-}
 
 
 .mm-menu {
@@ -275,7 +293,7 @@ a.city-title:hover {
 	}
 
 	h2 {
-		padding: 2em;
+		padding: 2em 0 2em 2em;
 		margin: 0 auto 0 0;
 
 		font-family: $sans-font;
@@ -299,7 +317,7 @@ a.city-title:hover {
     min-width: 60px;
 		overflow: hidden;
 		padding-top: 1.25em;
-		margin-right: 2em;
+		margin-right: 1.5em;
 		
 		align-self: center;
 	}
@@ -406,6 +424,11 @@ a.city-title:hover {
     color: white;
     text-align: center;
     font-size: .95em;
+
+    &:hover {
+    	opacity: .5;
+    	transition: .5s opacity;
+    }
 	}
 
 	.col-sm-4 {
@@ -415,11 +438,12 @@ a.city-title:hover {
 }
 
 #footer-bottom {
-	position: absolute;
-	bottom: 0;
+	// position: absolute;
+	// bottom: 0;
 	width:100%;
   height:auto;
   overflow: hidden;
+  font-size: .75em;
 }
 
 .other-stores {
@@ -439,6 +463,10 @@ a.city-title:hover {
 
 	div {
 		padding: 3em 0;
+	}
+
+	.col-xs-6:hover {
+		animation: pulse-background .5s forwards;
 	}
 }
 
@@ -486,6 +514,22 @@ a.city-title:hover {
 	}
 }
 
+@media (max-width: 1070px) {
+	.experience h2, 
+	.dresses h2 {
+		font-size: 1em;
+		max-width: 190px;
+	}
+}
+
+@media (max-width: 850px) and (min-width: 768px) {
+	.experience h2, 
+	.dresses h2 {
+		font-size: .75em;
+		max-width: 140px;
+	}
+}
+
 @media (max-width: 768px) {
 	.row {
     margin: 2em 0;
@@ -495,6 +539,8 @@ a.city-title:hover {
 	}
 	.experience,
 	.dresses {
+		padding-bottom: 2em;
+
 		h2 {
 			font-size: .95em !important;
 		}
@@ -506,10 +552,6 @@ a.city-title:hover {
 }
 
 @media (max-width: 414px) {
-	.menu {
-		margin-bottom: 2em;
-    margin-top: -1em;
-	}
 	.col-xs-12 {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
@@ -524,13 +566,23 @@ a.city-title:hover {
 	.dresses {
 		h2 {
 			font-size: $h1-font-size !important;
+			max-width: 100%;
 		}
 	}
-	.experience {
-		padding-bottom:  2em;
-	}
-	.page-container {
-		padding-bottom: 500px;
+
+	.header {
+		.menu {
+			margin-bottom: 2em;
+	    margin-top: -1.5em;
+		}
+
+		.menu img {
+			max-width: 35px;
+		}
+
+		.logo {
+			height: 100%;
+		}
 	}
 }
 
@@ -544,9 +596,6 @@ a.city-title:hover {
 	}
 	.btn {
 		font-size: .95em;
-	}
-	.experience h2, .dresses h2 {
-    font-size: 1em !important;
 	}
 }
 
