@@ -27,6 +27,7 @@ $gold: #D1A66C;
 $blackish: #565656;
 $grey: #F7F7F7;
 $lightgrey: #949DA3;
+$lightblue: #b6c6ce;
 $h1-font-size: 1.15em;
 $h1-letter-sp: .2em;
 
@@ -484,6 +485,11 @@ a.city-title:hover {
 			color: $lightgrey !important;
 		}
 	}
+}
+
+.trousseau {
+	color: $lightblue;
+	font-weight: bold;
 }
 
 .hidden { display: none; }
