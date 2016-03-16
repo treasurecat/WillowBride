@@ -104,7 +104,7 @@ img {
 	animation: fadein 1s;
 }
 
-a, a:hover, a:visited {
+a, a:hover, a:visited, a:focus {
 	color: $gold;
 	background: none;
 }
@@ -142,7 +142,7 @@ p {
   outline: none !important;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: $gold;
   color: $grey;
 }
