@@ -43,9 +43,12 @@
     <%= f.label :summary %><br>
     <%= f.text_area :summary, :class => 'wysihtml5' %>
   </div>
+
+  <%= image_tag @store.shop_image.url %>
+
   <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
+    <%= f.label :shop_image %><br>
+    <%= f.file_field :shop_image %>
   </div>
   <div class="actions">
     <%= f.submit %>

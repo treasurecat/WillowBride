@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160314162748) do
+ActiveRecord::Schema.define(version: 20160316201343) do
 
   create_table "stores", force: :cascade do |t|
     t.string   "name"
@@ -20,12 +20,16 @@ ActiveRecord::Schema.define(version: 20160314162748) do
     t.string   "url"
     t.text     "summary"
     t.binary   "picture"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "phone"
     t.string   "email"
     t.string   "hours"
     t.string   "theexperience"
+    t.string   "shop_image_file_name"
+    t.string   "shop_image_content_type"
+    t.integer  "shop_image_file_size"
+    t.datetime "shop_image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
