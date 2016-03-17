@@ -10,5 +10,8 @@ class CreateStores < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    change_table :stores do |t|
+      t.rename :theexperience theexperience
+    end
   end
 end
