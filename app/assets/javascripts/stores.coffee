@@ -6,12 +6,11 @@ ready = ->
 	$('.wysihtml5').each (i, elem) ->
     $(elem).wysihtml5 'toolbar':
       'blockquote': false
-      'html': false
       'font-styles': false
       'color': false
       'blockquote': false
       'lists': false
-      'html': false
+      'html': true
       'link': false
       'image': false
       'smallmodals': false

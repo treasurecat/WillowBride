@@ -39,7 +39,11 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs
+<<<<<<< HEAD
     bcrypt (3.1.11)
+=======
+    bcrypt (3.1.10)
+>>>>>>> 7a94b5496a996a9daa00bf1ef96483eea06b877e
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
