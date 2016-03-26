@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # In production mode (on heroku) rails compiles images, etc., to public/assets.  These
+  # precompiled images are served, not the files in assets
+  config.serve_static_files = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -63,7 +67,7 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  
+
   config.action_mailer.delivery_method = :smtp
 
   # SMTP settings for gmail
