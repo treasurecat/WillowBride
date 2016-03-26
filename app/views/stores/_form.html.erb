@@ -43,12 +43,30 @@
     <%= f.label :summary %><br>
     <%= f.text_area :summary, :class => 'wysihtml5' %>
   </div>
+  <div class="field">
+    <%= f.label :the_experience %><br>
+    <%= f.text_area :the_experience, :class => 'wysihtml5' %>
+  </div>
 
-  <%= image_tag @store.shop_image.url %>
+  <%= image_tag(@store.shop_image.url, :class => "img-thumbnail") %>
 
   <div class="field">
     <%= f.label :shop_image %><br>
     <%= f.file_field :shop_image %>
+  </div>
+
+  <%= image_tag(@store.gallery_image.url, :class => "img-thumbnail") %>
+
+  <div class="field">
+    <%= f.label :gallery_image %><br>
+    <%= f.file_field :gallery_image %>
+  </div>
+
+  <%= image_tag(@store.the_experience_image.url, :class => "img-thumbnail") %>
+
+  <div class="field">
+    <%= f.label :the_experience_image %><br>
+    <%= f.file_field :the_experience_image %>
   </div>
   <div class="actions">
     <%= f.submit %>
