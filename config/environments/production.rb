@@ -98,9 +98,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['willowbride'],
-      :access_key_id => ENV['AKIAITDF5CWTU4XDBR4A'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['aws_bucket'],
+      :access_key_id => ENV['aws_key_id'],
+      :secret_access_key => ENV['aws_access_key']
     }
   }
 
