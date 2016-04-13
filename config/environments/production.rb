@@ -95,6 +95,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['willowbride'],
+      :access_key_id => ENV['AKIAITDF5CWTU4XDBR4A'],
+      :secret_access_key => ENV['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']
+    }
+  }
 
   end
