@@ -5,7 +5,7 @@ gem 'rails', '4.2.6'
 
 # Use Paperclip for handling attachments, file uploads
 gem "paperclip", "~> 4.2"
-gem "aws-sdk"
+gem "aws-sdk", '< 2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
