@@ -1,0 +1,58 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @store.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @store.address %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <%= @store.state %>
+  </p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= @store.url %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @store.phone %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @store.email %>
+  </p>
+
+  <p>
+    <strong>Hours:</strong>
+    <%= @store.hours %>
+  </p>
+
+  <p>
+    <strong>Summary:</strong>
+    <%= @store.summary %>
+  </p>
+
+  <p>
+    <strong>The Experience:</strong>
+    <%= @store.the_experience %>
+  </p>
+
+  <p>
+    <strong>Picture:</strong>
+    <%= @store.picture %>
+  </p>
+
+  <%= link_to 'Edit', edit_store_path(@store) %> |
+  <%= link_to 'Back', stores_path %>
+
+</div>
