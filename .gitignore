@@ -25,4 +25,4 @@
 
 # Ignore application configuration
 /config/application.yml
->>>>>>> 9d424daf62d3d0a846801b85c59bc0687e6a3cc2
+/config/*
