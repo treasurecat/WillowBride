@@ -1,6 +1,6 @@
 class Contact < MailForm::Base
   attribute :name,      :validate => true
-  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :senderemail,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
   attribute :nickname,  :captcha  => true
   attribute :recipient
@@ -11,7 +11,7 @@ class Contact < MailForm::Base
     {
       :subject => "Willow Bride Contact Form",
       :to => %("#{recipient}"),
-      :from => %("#{name}" <#{email}>)
+      :from => %("#{name}" <#{senderemail}>)
     }
   end
 end
