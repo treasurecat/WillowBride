@@ -222,6 +222,7 @@ a.city-title:hover {
 	display: block;
 	text-align: center;
 	padding-top: .5em;
+	font-size: $h1-font-size;
 }
 
 
@@ -403,7 +404,7 @@ a.city-title:hover {
 		text-transform: uppercase;
 		letter-spacing: .1em;
 		font-family: $sans-font;
-		font-size: $h1-font-size;
+		font-size: .75em;
 	}
 
 	p {
@@ -514,7 +515,7 @@ a.city-title:hover {
     margin: .5em 0;
     font-family: "brandon-grotesque", sans-serif;
     letter-spacing: $h1-letter-sp;
-    font-size: $h1-font-size;
+    font-size: .75em;
     color: #565656 !important;
 	}
 
