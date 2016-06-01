@@ -219,6 +219,13 @@ p {
 	color: $blackish !important;
 }
 
+.h3-experience {
+	font-family: $serif-font;
+	font-size: $h1-font-size;
+	letter-spacing: $h1-letter-sp;
+	color: #dae2e6;
+}
+
 a.city-title:hover {
 	text-decoration: none;
 }
@@ -329,6 +336,8 @@ a.city-title:hover {
 		
 		align-self: center;
 	}
+
+
 
 	.arrow-circle {
 			align-self: center;
