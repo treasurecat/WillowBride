@@ -9,9 +9,17 @@ class WhitefishController < ApplicationController
 
   def explore
   	@store = Store.find_by_name("Whitefish, Montana")
+    # replace Store with Designer
+    @designers = Store.all
   end
 
   def contact
   	@store = Store.find_by_name("Whitefish, Montana")
+  end
+
+  def designer
+    @store = Store.find_by_name("Whitefish, Montana")
+    @designer = "Jenny Yoo"
+    @dresses = Store.all
   end
 end
