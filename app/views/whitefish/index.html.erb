@@ -10,7 +10,7 @@
 			</div>
 			<div class="col-xs-12 col-md-6 location-info">
 				<h3 class="city-title"><%= @store.name %></h3>
-				<p><%= @store.summary %></p>
+				<p><%= @store.summary.html_safe %></p>
 			</div>
 		</div>
 	</div>
