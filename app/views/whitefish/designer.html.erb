@@ -1,0 +1,31 @@
+<div class="container">
+	
+	<%= render partial: "nav" %>
+
+	<div class="row no-bottom">
+		<div class="col-xs-12 designer-detail">
+			<div class="col-xs-12 display-container">
+
+				<div class="col-xs-12">
+					<h4 class="pull-left"><%= @designer %></h4>
+					<h4 class="pull-right">$2,200-$6,000</h4>
+				</div>
+				<div class="col-xs-12">
+					<p class="designer-desc">Claire La Foye's bridal collections emits a heavy nostalgia and days gone by, yet still sings all things sexy and unique. Re-working back thoruh fashion history, she cuts old Hollywood glamour with a modern day sillhouette that is both creative and whimsical.
+					</p>
+				</div>
+
+			<% @dresses.each do |dress| %>
+				<div class="col-xs-12 col-sm-4">
+					<%= image_tag(@store.gallery_image.url, :alt => dress, :class => "dress-img") %>
+ 				</div>
+			<% end %>
+
+					
+		</div>
+	</div>
+</div>
+
+<%= render partial: "whitefish_footer" %>
+
+<%= render partial: "footer" %>

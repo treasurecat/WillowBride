@@ -75,6 +75,7 @@ Rails.application.routes.draw do
   match "/whitefish/experience", to: "whitefish#experience", :via => 'get'
   match "/whitefish/explore", to: "whitefish#explore", :via => 'get'
   match "/whitefish/contact", to: "whitefish#contact", :via => 'get'
+  match "/whitefish/designer", to: "whitefish#designer", :via => 'get'
 
   match "/tupelo/experience", to: "tupelo#experience", :via => 'get'
   match "/tupelo/explore", to: "tupelo#explore", :via => 'get'

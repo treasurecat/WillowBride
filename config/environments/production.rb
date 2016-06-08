@@ -81,6 +81,7 @@ Rails.application.configure do
    :authentication       => "plain",
    :enable_starttls_auto => true
   }
+  config.action_mailer.default_options = {from: 'no-reply@willowbride.com'}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -98,9 +99,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['aws_bucket'],
-      :access_key_id => ENV['aws_key_id'],
-      :secret_access_key => ENV['aws_access_key']
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_KEY_ID'],
+      :secret_access_key => ENV['AWS_ACCESS_KEY']
     }
   }
 
