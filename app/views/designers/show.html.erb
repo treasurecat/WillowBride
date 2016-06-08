@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @designer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @designer.description %>
+</p>
+
+<p>
+  <strong>Main image:</strong>
+  <%= @designer.main_image %>
+</p>
+
+<p>
+  <strong>Location1:</strong>
+  <%= @designer.location1 %>
+</p>
+
+<p>
+  <strong>Location2:</strong>
+  <%= @designer.location2 %>
+</p>
+
+<p>
+  <strong>Location3:</strong>
+  <%= @designer.location3 %>
+</p>
+
+<%= link_to 'Edit', edit_designer_path(@designer) %> |
+<%= link_to 'Back', designers_path %>

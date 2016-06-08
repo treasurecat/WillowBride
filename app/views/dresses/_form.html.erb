@@ -1,0 +1,53 @@
+<%= form_for(@dress) do |f| %>
+  <% if @dress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dress.errors.count, "error") %> prohibited this dress from being saved:</h2>
+
+      <ul>
+      <% @dress.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :designer_id %><br>
+    <%= f.number_field :designer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :main_image %><br>
+    <%= f.text_field :main_image %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :style %><br>
+    <%= f.text_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :garment_type %><br>
+    <%= f.text_field :garment_type %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br>
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :collection %><br>
+    <%= f.text_field :collection %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

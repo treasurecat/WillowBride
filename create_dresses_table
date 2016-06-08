@@ -1,0 +1,1 @@
+ bin/rails generate scaffold Dress designer_id:integer location:string main_image:binary price:float style:string garment_type:string tag:string name:string collection:string
