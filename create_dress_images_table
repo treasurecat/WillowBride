@@ -1,0 +1,1 @@
+ bin/rails generate scaffold DressImage dress_id:integer image:binary

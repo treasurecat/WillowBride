@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :dress_images
+  resources :dresses
+  resources :designers
   devise_for :users
   get 'nashville/index'
 

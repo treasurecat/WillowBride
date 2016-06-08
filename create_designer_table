@@ -1,0 +1,1 @@
+ bin/rails generate scaffold Designer name:string description:text main_image:binary location1:string location2:string location3:string

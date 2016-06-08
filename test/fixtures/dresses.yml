@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  designer_id: 1
+  location: MyString
+  main_image: 
+  price: 1.5
+  style: MyString
+  garment_type: MyString
+  tag: MyString
+  name: MyString
+  collection: MyString
+
+two:
+  designer_id: 1
+  location: MyString
+  main_image: 
+  price: 1.5
+  style: MyString
+  garment_type: MyString
+  tag: MyString
+  name: MyString
+  collection: MyString
