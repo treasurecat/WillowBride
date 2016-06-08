@@ -126,6 +126,11 @@ p {
 	margin: 4em 0 0 0;
 }
 
+.no-padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .btn {
 	text-transform: uppercase;
 	font-family: $sans-font;
@@ -222,6 +227,7 @@ a.city-title:hover {
 	display: block;
 	text-align: center;
 	padding-top: .5em;
+	font-size: $h1-font-size;
 }
 
 
@@ -324,6 +330,13 @@ a.city-title:hover {
 		align-self: center;
 	}
 
+	h3 {
+		font-family: $serif-font;
+		font-size: $h1-font-size;
+		letter-spacing: $h1-letter-sp;
+		color: #dae2e6;
+	}
+
 	.arrow-circle {
 			align-self: center;
 			justify-content: flex-end;
@@ -345,7 +358,7 @@ a.city-title:hover {
 	p {
 		font-family: $serif-font;
 		line-height: 2em;
-		padding: 1em 2em 0 0;
+		padding: 1em 2em 1em 0;
 		font-size: 1.15em;
 		animation: fadein 1s;
 
@@ -365,6 +378,9 @@ a.city-title:hover {
 		text-align: center;
 		padding: .5em 0;
 		font-family: $sans-font;
+		letter-spacing: $h1-letter-sp;
+		height: 60px;
+		font-size: .85em;
 	}
 
 	.coming-soon {
@@ -373,6 +389,39 @@ a.city-title:hover {
 		text-align: center; 
 		padding: 6em 0 0 0;
 		font-size: 1em;
+	}
+
+	.designer-img {
+		margin: 30px 0;
+		display: inline-block;
+	}
+
+	.col-xs-12.col-sm-4 {
+		padding-right: 0px !important;
+	}
+}
+
+.designer-detail {
+	h4 {
+		text-transform: uppercase;
+		font-family: $sans-font;
+		letter-spacing: $h1-letter-sp;
+		font-size: .75em;
+		color: $blackish !important;
+	}
+
+	.dress-img {
+		margin: 30px 0;
+		display: inline-block;
+	}
+
+	.col-xs-12.col-sm-4 {
+		padding-right: 0px !important;
+	}
+
+	.designer-desc {
+		padding: 2em 0 0;
+		font-family: $serif-font;
 	}
 }
 
@@ -397,13 +446,14 @@ a.city-title:hover {
 		color: $lightgrey;
 		letter-spacing: .1em;
 		margin-top: 2em;
+		font-size: .95em;
 	}
 
 	.email {
 		text-transform: uppercase;
 		letter-spacing: .1em;
 		font-family: $sans-font;
-		font-size: $h1-font-size;
+		font-size: .8em;
 	}
 
 	p {
@@ -457,6 +507,7 @@ a.city-title:hover {
 
 	.city-title {
 		color: $lightgrey !important;
+		font-size: 1em;
 	}
 
 	div:first-child {
@@ -514,7 +565,7 @@ a.city-title:hover {
     margin: .5em 0;
     font-family: "brandon-grotesque", sans-serif;
     letter-spacing: $h1-letter-sp;
-    font-size: $h1-font-size;
+    font-size: .75em;
     color: #565656 !important;
 	}
 
@@ -544,7 +595,18 @@ a.city-title:hover {
 	}
 }
 
+@media (min-width: 769px) {
+	.display-container {
+		padding-left: 60px !important;
+    padding-right: 60px !important;
+	}
+}
+
 @media (max-width: 768px) {
+	.display-container {
+		padding-left: 0px !important;
+    padding-right: 0px !important;
+	}
 	.row {
     margin: 2em 0;
 	}
@@ -565,7 +627,7 @@ a.city-title:hover {
 	}
 }
 
-@media (max-width: 414px) {
+@media (max-width: 767px) {
 	.col-xs-12 {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
