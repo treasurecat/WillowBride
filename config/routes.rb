@@ -81,10 +81,12 @@ Rails.application.routes.draw do
   match "/tupelo/experience", to: "tupelo#experience", :via => 'get'
   match "/tupelo/explore", to: "tupelo#explore", :via => 'get'
   match "/tupelo/contact", to: "tupelo#contact", :via => 'get'
+  match "/tupelo/designers/:name", to: "tupelo#designer", :via => 'get', :as => 'tupelo_designers_name'
 
   match "/nashville/experience", to: "nashville#experience", :via => 'get'
   match "/nashville/explore", to: "nashville#explore", :via => 'get'
   match "/nashville/contact", to: "nashville#contact", :via => 'get'
+  match "/nashville/designers/:name", to: "nashville#designer", :via => 'get', :as => 'nashville_designers_name'
 
 
   match '/contacts', to: 'contacts#new', via: 'get'
