@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :designer_id %><br>
-    <%= select("post", "location1", Designer.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.designer, prompt: 'Select Designer'}) %>
+    <%= f.select :designer_id, options_for_select(Designer.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.designer, prompt: 'Select Designer'}) %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= select("post", "location", Store.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.location, prompt: 'Select Location'}) %>
+    <%= f.select :location, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @dress.location, prompt: 'Select Location'}) %>
 
   </div>
 
