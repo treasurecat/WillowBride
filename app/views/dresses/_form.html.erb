@@ -13,15 +13,19 @@
 
   <div class="field">
     <%= f.label :designer_id %><br>
-    <%= f.number_field :designer_id %>
+    <%= select("post", "location1", Designer.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.designer, prompt: 'Select Designer'}) %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= select("post", "location", Store.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.location, prompt: 'Select Location'}) %>
+
   </div>
+
+  <%= image_tag(@dress.main_image.url, :class => "img-thumbnail") %>
+
   <div class="field">
     <%= f.label :main_image %><br>
-    <%= f.text_field :main_image %>
+    <%= f.file_field :main_image %>
   </div>
   <div class="field">
     <%= f.label :price %><br>

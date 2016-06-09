@@ -9,8 +9,7 @@ class WhitefishController < ApplicationController
 
   def explore
   	@store = Store.find_by_name("Whitefish, Montana")
-    # replace Store with Designer
-    @designers = Store.all
+    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", "Whitefish, Montana", "Whitefish, Montana", "Whitefish, Montana")
   end
 
   def contact
@@ -19,7 +18,7 @@ class WhitefishController < ApplicationController
 
   def designer
     @store = Store.find_by_name("Whitefish, Montana")
-    @designer = "Jenny Yoo"
-    @dresses = Store.all
+    @designer = Designer.find_by_name(params[:name].gsub('_', ' '))
+    @dresses = Dress.where(designer_id: @designer, location: "Whitefish, Montana")
   end
 end
