@@ -11,7 +11,7 @@
       </div>
       <%= bootstrap_form_for Contact.new, layout: :horizontal, label_col: "col-xs-3", control_col: "col-xs-9" do |f| %>
         <%= f.text_field :name, :required => true, label_class: "label" %>
-        <%= f.text_field :senderemail, :required => true, label_class: "label", label: "email" %>
+        <%= f.text_field :sender, :required => true, label_class: "label", label: "email" %>
         <%= f.text_area :message, :as => :text, :required => true, label_class: "label" %>
         <div class= "hidden">
           <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
