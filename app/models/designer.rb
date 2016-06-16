@@ -8,4 +8,7 @@ class Designer < ActiveRecord::Base
   validates :name,
             :presence => true
 
+  has_attached_file :main_image
+  validates_attachment :main_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
 end

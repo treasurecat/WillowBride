@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :stores
+  resources :designers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -75,15 +76,17 @@ Rails.application.routes.draw do
   match "/whitefish/experience", to: "whitefish#experience", :via => 'get'
   match "/whitefish/explore", to: "whitefish#explore", :via => 'get'
   match "/whitefish/contact", to: "whitefish#contact", :via => 'get'
-  match "/whitefish/designer", to: "whitefish#designer", :via => 'get'
+  match "/whitefish/designers/:name", to: "whitefish#designer", :via => 'get', :as => 'whitefish_designers_name'
 
   match "/tupelo/experience", to: "tupelo#experience", :via => 'get'
   match "/tupelo/explore", to: "tupelo#explore", :via => 'get'
   match "/tupelo/contact", to: "tupelo#contact", :via => 'get'
+  match "/tupelo/designers/:name", to: "tupelo#designer", :via => 'get', :as => 'tupelo_designers_name'
 
   match "/nashville/experience", to: "nashville#experience", :via => 'get'
   match "/nashville/explore", to: "nashville#explore", :via => 'get'
   match "/nashville/contact", to: "nashville#contact", :via => 'get'
+  match "/nashville/designers/:name", to: "nashville#designer", :via => 'get', :as => 'nashville_designers_name'
 
 
   match '/contacts', to: 'contacts#new', via: 'get'

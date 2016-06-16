@@ -11,7 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317182704) do
+ActiveRecord::Schema.define(version: 20160609155215) do
+
+  create_table "designers", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.binary   "main_image"
+    t.string   "location1"
+    t.string   "location2"
+    t.string   "location3"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
+    t.string   "price"
+  end
+
+  create_table "dress_images", force: :cascade do |t|
+    t.integer  "dress_id"
+    t.binary   "image"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "dresses", force: :cascade do |t|
+    t.integer  "designer_id"
+    t.string   "location"
+    t.binary   "main_image"
+    t.float    "price"
+    t.string   "style"
+    t.string   "garment_type"
+    t.string   "tag"
+    t.string   "name"
+    t.string   "collection"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
+  end
 
   create_table "stores", force: :cascade do |t|
     t.string   "name"

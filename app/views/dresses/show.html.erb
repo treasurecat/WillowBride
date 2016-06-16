@@ -1,49 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Designer:</strong>
-  <%= @dress.designer_id %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @dress.location %>
-</p>
+  <p>
+    <strong>Designer:</strong>
+    <%= @dress.designer_id %>
+  </p>
 
-<p>
-  <strong>Main image:</strong>
-  <%= @dress.main_image %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @dress.location %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @dress.price %>
-</p>
+  <p>
+    <strong>Main image:</strong>
+    <%= image_tag(@dress.main_image.url, :class => "img-thumbnail") %>
+  </p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @dress.style %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @dress.price %>
+  </p>
 
-<p>
-  <strong>Garment type:</strong>
-  <%= @dress.garment_type %>
-</p>
+  <p>
+    <strong>Style:</strong>
+    <%= @dress.style %>
+  </p>
 
-<p>
-  <strong>Tag:</strong>
-  <%= @dress.tag %>
-</p>
+  <p>
+    <strong>Garment type:</strong>
+    <%= @dress.garment_type %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @dress.name %>
-</p>
+  <p>
+    <strong>Tag:</strong>
+    <%= @dress.tag %>
+  </p>
 
-<p>
-  <strong>Collection:</strong>
-  <%= @dress.collection %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @dress.name %>
+  </p>
 
-<%= link_to 'Edit', edit_dress_path(@dress) %> |
-<%= link_to 'Back', dresses_path %>
+  <p>
+    <strong>Collection:</strong>
+    <%= @dress.collection %>
+  </p>
+
+  <%= link_to 'Edit', edit_dress_path(@dress) %> |
+  <%= link_to 'Back', dresses_path %>
+</div>

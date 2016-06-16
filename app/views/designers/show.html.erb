@@ -1,34 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @designer.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @designer.description %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @designer.name %>
+  </p>
 
-<p>
-  <strong>Main image:</strong>
-  <%= @designer.main_image %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @designer.description %>
+  </p>
 
-<p>
-  <strong>Location1:</strong>
-  <%= @designer.location1 %>
-</p>
+  <p>
+    <strong>Price Range:</strong>
+    <%= @designer.price %>
+  </p>
+  <p>
+    <strong>Main image:</strong>
+    <%= image_tag(@designer.main_image.url, :class => "img-thumbnail") %>
+  </p>
 
-<p>
-  <strong>Location2:</strong>
-  <%= @designer.location2 %>
-</p>
+  <p>
+    <strong>Location1:</strong>
+    <%= @designer.location1 %>
+  </p>
 
-<p>
-  <strong>Location3:</strong>
-  <%= @designer.location3 %>
-</p>
+  <p>
+    <strong>Location2:</strong>
+    <%= @designer.location2 %>
+  </p>
 
-<%= link_to 'Edit', edit_designer_path(@designer) %> |
-<%= link_to 'Back', designers_path %>
+  <p>
+    <strong>Location3:</strong>
+    <%= @designer.location3 %>
+  </p>
+
+  <%= link_to 'Edit', edit_designer_path(@designer) %> |
+  <%= link_to 'Back', designers_path %>
+</div>
