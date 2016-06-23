@@ -26,6 +26,19 @@
 				%>
 						<%= image_tag(dress.main_image.url, :alt => dress, :class => "dress-img") %>
 	 				</div>
+
+
+	 				<% DressImage.where(dress_id: dress).limit(4).each_with_index do |additional_img, ad_index| %>
+
+	 					<% if (((index + 1) % 2) + ((ad_index + 1) % 2))=== 0 %>
+							<div class="col-xs-12 col-sm-6 pull-left left-col reveal">
+						<% else %>
+							<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
+						<% end
+						%>
+						<%= image_tag(additional_img.image.url, :alt => dress, :class => "dress-img") %>
+						</div>
+					<% end %>
 				<% end %>
 
 			</div>		

@@ -23,7 +23,7 @@
     <tbody>
       <% @dresses.each do |dress| %>
         <tr>
-          <td><%= dress.designer_id %></td>
+          <td><%= Designer.find_by_id(dress.designer_id).name  %></td>
           <td><%= dress.location %></td>
           <td><%= image_tag(dress.main_image.url, :class => "img-thumbnail") %></td>
           <td><%= dress.price %></td>

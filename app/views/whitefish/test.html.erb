@@ -1,0 +1,24 @@
+<div class="container">
+	
+	<%= render partial: "nav" %>
+
+	<div class="row no-bottom">
+		<div class="col-xs-12 designers">
+			<div class="col-xs-12 display-container">
+
+					<!-- New Location Gallery below -->
+					<% @designers.each do |designer| %>
+						<div class="col-xs-12 col-sm-4">
+							<%= link_to image_tag(designer.main_image.url, :alt => designer.name, :class => "designer-img"), whitefish_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer-main' %>
+							<%= link_to designer.name, whitefish_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer' %>
+		 				</div>
+					<% end %>
+					<!-- end -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render partial: "whitefish_footer" %>
+
+<%= render partial: "footer" %>

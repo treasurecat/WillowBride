@@ -4,7 +4,7 @@
 
   <p>
     <strong>Designer:</strong>
-    <%= @dress.designer_id %>
+    <%= Designer.find_by_id(@dress.designer_id).name %>
   </p>
 
   <p>

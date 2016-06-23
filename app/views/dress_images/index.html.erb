@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Listing Dress Images</h1>
+  <h1>Listing Dress Images</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Dress</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dress_images.each do |dress_image| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= dress_image.dress_id %></td>
-        <td><%= dress_image.image %></td>
-        <td><%= link_to 'Show', dress_image %></td>
-        <td><%= link_to 'Edit', edit_dress_image_path(dress_image) %></td>
-        <td><%= link_to 'Destroy', dress_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Dress</th>
+        <th>Image</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @dress_images.each do |dress_image| %>
+        <tr>
+          <td><%= Dress.find_by_id(dress_image.dress_id).name %></td>
+          <td><%= image_tag(dress_image.image.url, :class => "img-thumbnail") %></td>
+          <td><%= link_to 'Show', dress_image %></td>
+          <td><%= link_to 'Edit', edit_dress_image_path(dress_image) %></td>
+          <td><%= link_to 'Destroy', dress_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Dress image', new_dress_image_path %>
+  <br>
+
+  <%= link_to 'New Dress image', new_dress_image_path, class: 'btn btn-default' %>
+</div>
