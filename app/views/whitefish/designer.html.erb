@@ -23,8 +23,11 @@
 				<% else %>
 					<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
 				<% end
-				%>
-						<%= image_tag(dress.main_image.url, :alt => dress, :class => "dress-img") %>
+				%>	
+						<div class="dress_contain">
+							<%= image_tag(dress.main_image.url, :alt => dress, :class => "dress-img") %>
+							<span class="dress_name"><%= dress.name %></span>
+						</div>
 	 				</div>
 
 
@@ -36,7 +39,10 @@
 							<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
 						<% end
 						%>
-						<%= image_tag(additional_img.image.url, :alt => dress, :class => "dress-img") %>
+						<div class="dress_contain">
+							<%= image_tag(additional_img.image.url, :alt => dress, :class => "dress-img") %>
+							<span class="dress_name"><%= dress.name %></span>
+						</div>
 						</div>
 					<% end %>
 				<% end %>

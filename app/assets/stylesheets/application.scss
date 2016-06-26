@@ -434,6 +434,36 @@ a.city-title:hover {
 		text-align: left;
 		padding: 7px !important;
 	}
+
+
+	.dress_contain {
+		display: inline-block;
+		clear: both;
+		position: relative;
+	}
+
+	.dress_name {
+		opacity: 0;
+
+		display: inline-block;
+		background: white;
+		width: 100%;
+		border: 1px solid $gold;
+		text-transform: uppercase;
+		color: $gold;
+		font-family: $sans-font;
+		font-size: .75em;
+		padding: 1.5em;
+		text-align: left;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.dress_contain:hover .dress_name {
+		opacity: 1;
+		transition: opacity .5s;
+	}
 }
 
 
@@ -636,6 +666,15 @@ a.city-title:hover {
 	.experience p {
 		padding-right: 0em !important;
 	}
+
+	.dress_contain {
+		display: block !important;
+	}
+
+	.dress_contain .dress_name {
+		opacity: 1 !important;
+		transition: opacity .5s;
+	}
 }
 
 @media (max-width: 767px) {
@@ -671,6 +710,8 @@ a.city-title:hover {
 	.dress-img {
 		width: 100% !important;
 	}
+
+	
 }
 
 @media (max-width: 320px) {
