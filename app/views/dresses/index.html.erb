@@ -9,7 +9,6 @@
       <tr>
         <th>Designer</th>
         <th>Location</th>
-        <th>Main image</th>
         <th>Price</th>
         <th>Style</th>
         <th>Garment type</th>
@@ -25,7 +24,6 @@
         <tr>
           <td><%= Designer.find_by_id(dress.designer_id).name  %></td>
           <td><%= dress.location %></td>
-          <td><%= image_tag(dress.main_image.url, :class => "img-thumbnail") %></td>
           <td><%= dress.price %></td>
           <td><%= dress.style %></td>
           <td><%= dress.garment_type %></td>
