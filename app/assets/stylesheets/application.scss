@@ -392,14 +392,26 @@ a.city-title:hover {
 
 	a.designer-main {
 		display: inline-block;
-    max-height: 222px;
-    max-width: 222px;
+		position: relative;
+    width: 100%;
     overflow: hidden;
+	}
+	a.designer-main:before{
+		content: "";
+		display: inline-block;
+		padding-top: 100%; 	/* initial ratio of 1:1*/
 	}
 
 	.designer-img {
 		margin: 30px 0;
 		display: inline-block;
+		max-width: 100%;
+  	height: auto;
+  	position:  absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 	}
 
 	.col-xs-12.col-sm-4 {
