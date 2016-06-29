@@ -25,7 +25,7 @@
 				<% end
 				%>	
 						<div class="dress_contain">
-							<%= image_tag(dress.main_image.url, :alt => dress, :class => "dress-img") %>
+							<%= image_tag(dress.main_image.url(:display), :alt => dress, :class => "dress-img") %>
 							<span class="dress_name"><%= dress.name %></span>
 						</div>
 	 				</div>
@@ -40,7 +40,7 @@
 						<% end
 						%>
 						<div class="dress_contain">
-							<%= image_tag(additional_img.image.url, :alt => dress, :class => "dress-img") %>
+							<%= image_tag(additional_img.image.url(:display), :alt => dress, :class => "dress-img") %>
 							<span class="dress_name"><%= dress.name %></span>
 						</div>
 						</div>

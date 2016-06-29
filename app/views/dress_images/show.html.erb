@@ -8,7 +8,7 @@
 
 	<p>
 	  <strong>Image:</strong>
-	  <%= image_tag(@dress_image.image.url, :class => "img-thumbnail") %>
+	  <%= image_tag(@dress_image.image.url(:thumb), :class => "img-thumbnail") %>
 	</p>
 
 	<%= link_to 'Edit', edit_dress_image_path(@dress_image) %> |
