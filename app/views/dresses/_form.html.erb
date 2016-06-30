@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :designer_id %><br>
-    <%= f.select :designer_id, options_for_select(Designer.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress.designer.id, prompt: 'Select Designer'}) %>
+    <%= 
+      @dress_id = @dress.designer ? @dress.designer.id : ''
+      f.select :designer_id, options_for_select(Designer.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress_id, prompt: 'Select Designer'}) %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
