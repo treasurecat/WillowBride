@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :dress_id %><br>
-    <%= f.select :dress_id, options_for_select(Dress.all.collect {|s| [ s.name, s.id ] }, {:selected => @dress_image.dress_id, prompt: 'Select Dress'}) %>
+    <%= f.select :dress_id, options_for_select(Dress.all.collect {|s| [ s.name + ' - ' + s.location, s.id ] }, {:selected => @dress_image.dress_id, prompt: 'Select Dress'}) %>
   </div>
 
   <%= image_tag(@dress_image.image.url, :class => "img-thumbnail") %>
