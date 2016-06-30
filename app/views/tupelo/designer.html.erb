@@ -58,17 +58,22 @@
 					<% if !@dresses_right.blank? %>
 						<% @dresses_right.each_with_index do |dress, index| %>
 
-							<% 
+							<p><% 
 								if defined?(dress.image.url)
 									@dress_img = dress.image.url(:display) 
 								else 
-									@dress_img = dress.main_image.url(:display) 
+									@dress_img = ''
+								end
+								if defined?(dress.main_image.url)
+									@dress_img = dress.main_image.url(:display)
+								else 
+									@dress_img = '' 
 								end
 
 								if defined?(dress.name)
 									@dress_name = dress.name
 								end
-							%>
+							%></p>
 
 							<div class="dress_contain reveal">
 								<%= image_tag(@dress_img, :alt => dress, :class => "dress-img") %>
