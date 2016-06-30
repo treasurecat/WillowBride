@@ -4,7 +4,7 @@ class DressImagesController < ApplicationController
   # GET /dress_images
   # GET /dress_images.json
   def index
-    @dress_images = DressImage.all
+    @dress_images = DressImage.order("updated_at ASC").all
   end
 
   # GET /dress_images/1

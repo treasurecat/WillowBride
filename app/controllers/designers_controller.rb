@@ -4,7 +4,7 @@ class DesignersController < ApplicationController
   # GET /designers
   # GET /designers.json
   def index
-    @designers = Designer.all
+    @designers = Designer.order("updated_at ASC").all
   end
 
   # GET /designers/1

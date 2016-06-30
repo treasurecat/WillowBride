@@ -4,7 +4,7 @@ class DressesController < ApplicationController
   # GET /dresses
   # GET /dresses.json
   def index
-    @dresses = Dress.all
+    @dresses = Dress.order("updated_at ASC").all
   end
 
   # GET /dresses/1
