@@ -15,12 +15,14 @@
 				</div>
 
 				<div style="height: 30px; width: 100%; clear: both;"></div>
-
+				<% @last = 'right' %>
 				<% @dresses.each_with_index do |dress, index| %>
 
-				<% if(index + 1) % 2 === 0 %>
+				<% if @last == 'left' %>
+					<% @last = 'right' %>
 					<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
 				<% else %>
+					<% @last = 'left' %>
 					<div class="col-xs-12 col-sm-6 pull-left left-col reveal">
 				<% end
 				%>	
@@ -33,9 +35,11 @@
 
 	 				<% DressImage.where(dress_id: dress).limit(4).each_with_index do |additional_img, ad_index| %>
 
-	 					<% if (((index + 1) % 2) + ((ad_index + 1) % 2))=== 0 %>
+	 					<% if @last == 'left' %>
+	 						<% @last = 'right' %>
 							<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
 						<% else %>
+							<% @last = 'left' %>
 							<div class="col-xs-12 col-sm-6 pull-left left-col reveal">
 						<% end
 						%>
