@@ -35,11 +35,11 @@
 					<% @dresses_left.each_with_index do |dress, index| %>
 
 						<% 
-							# if defined?(dress.image)
-							# 	@dress_img = dress.image.url(:display) 
-							# else 
-							# 	@dress_img = dress.main_image.url(:display) 
-							# end
+							if defined?(dress.image.url)
+								@dress_img = dress.image.url(:display) 
+							else 
+								@dress_img = dress.main_image.url(:display) 
+							end
 
 							if defined?(dress.name)
 								@dress_name = dress.name 
@@ -55,26 +55,27 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-6 pull-right right-col">	
+					<% if !@dresses_right.blank? %>
+						<% @dresses_right.each_with_index do |dress, index| %>
 
-					<% @dresses_right.each_with_index do |dress, index| %>
+							<% 
+								if defined?(dress.image.url)
+									@dress_img = dress.image.url(:display) 
+								else 
+									@dress_img = dress.main_image.url(:display) 
+								end
 
-						<% 
-							# if defined?(dress.image)
-							# 	@dress_img = dress.image.url(:display) 
-							# else 
-							# 	@dress_img = dress.main_image.url(:display) 
-							# end
+								if defined?(dress.name)
+									@dress_name = dress.name
+								end
+							%>
 
-							if defined?(dress.name)
-								@dress_name = dress.name
-							end
-						%>
+							<div class="dress_contain reveal">
+								<%= image_tag(@dress_img, :alt => dress, :class => "dress-img") %>
+								<span class="dress_name"><%= @dress_name %></span>
+							</div>
 
-						<div class="dress_contain reveal">
-							<%= image_tag(@dress_img, :alt => dress, :class => "dress-img") %>
-							<span class="dress_name"><%= @dress_name %></span>
-						</div>
-
+						<% end %>
 					<% end %>
 				</div>
 
