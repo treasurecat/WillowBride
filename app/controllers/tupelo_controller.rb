@@ -23,7 +23,7 @@ class TupeloController < ApplicationController
   def designer
     @store = Store.find_by_name(@@city)
     @designer = Designer.find_by_name(params[:name].gsub('_', ' '))
-    @dresses = Dress.where(designer_id: @designer, location: @@city)
+    @city = @@city
   end
 
   def test
