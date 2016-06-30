@@ -60,15 +60,11 @@
 						<% @dresses_right.each_with_index do |dress, index| %>
 
 							<p><% 
-								if defined?(dress.image.url)
+								if defined?(dress.image)
 									@dress_img = dress.image.url(:display) 
-								else 
-									@dress_img = ''
 								end
-								if defined?(dress.main_image.url)
+								if defined?(dress.main_image)
 									@dress_img = dress.main_image.url(:display)
-								else 
-									@dress_img = '' 
 								end
 
 								if defined?(dress.name)
