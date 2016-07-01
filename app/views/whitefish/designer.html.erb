@@ -22,13 +22,12 @@
 
 					Dress.where(designer_id: @designer, location: @city).each do |main_img|
 						@dresses.push(main_img)
-						DressImage.where(dress_id: main_img).each do |additional_img|
+						DressImage.where(dress_id: main_img.id).limit(4).each do |additional_img|
 							@dresses.push(additional_img)
 						end
 					end
 
-				  @dresses_left, @dresses_right = @dresses.in_groups(2)
-				  @dresses_right.pop
+				  @dresses_left, @dresses_right = @dresses.in_groups(2, false)
 
 				%>
 				
