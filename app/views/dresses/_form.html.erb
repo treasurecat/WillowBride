@@ -15,9 +15,9 @@
     <%= f.label :designer_id %><br>
     <%
       @dress_id = @dress.designer ? @dress.designer.id : ''
-      @designer_collection = Designer.all.collect {|s| [ s.name, s.id ] }
+      @designer_collection = Designer.all.order('updated_at ASC').collect {|s| [ s.name, s.id ] }
     %>
-    <%=  f.select :designer_id, options_for_select(@designer_collection.reverse, {:selected => @dress_id, prompt: 'Select Designer'}) %>
+    <%=  f.select :designer_id, options_for_select(@designer_collection, {:selected => @dress_id, prompt: 'Select Designer'}) %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
