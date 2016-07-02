@@ -15,6 +15,7 @@ class DressesController < ApplicationController
   # GET /dresses/new
   def new
     @dress = Dress.new
+    @designer_collection = Designer.all.order('updated_at')
   end
 
   # GET /dresses/1/edit
