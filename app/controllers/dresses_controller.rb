@@ -20,6 +20,7 @@ class DressesController < ApplicationController
 
   # GET /dresses/1/edit
   def edit
+    @designer_collection = Designer.all.order('updated_at')
   end
 
   # POST /dresses

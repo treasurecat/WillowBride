@@ -15,7 +15,7 @@
     <%= f.label :designer_id %><br>
     <%
       @dress_id = @dress.designer ? @dress.designer.id : ''
-      @designer_collection = @designer_collection.collect {|s| [ s.name, s.id ] }
+      @designer_collection = Designer.all.collect {|s| [ s.name, s.id ] }
     %>
     <%=  f.select :designer_id, options_for_select(@designer_collection.reverse, {:selected => @dress_id, prompt: 'Select Designer'}) %>
   </div>
