@@ -738,6 +738,13 @@ a.city-title:hover {
 	
 }
 
+@media (max-width: 414px) {
+	.price {
+		float: left !important;
+		clear: both;
+	}
+}
+
 @media (max-width: 320px) {
 	.contact-form .label {
 		font-size: .75em;
