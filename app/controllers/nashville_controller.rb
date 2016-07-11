@@ -12,7 +12,7 @@ class NashvilleController < ApplicationController
 
   def explore
     @store = Store.find_by_name(@@city)
-    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", @@city, @@city, @@city)
+    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", @@city, @@city, @@city).order("created_at ASC")
   end
 
   def contact
