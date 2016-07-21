@@ -12,7 +12,7 @@ class TupeloController < ApplicationController
 
   def explore
     @store = Store.find_by_name(@@city)
-    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", @@city, @@city, @@city)
+    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", @@city, @@city, @@city).order("created_at ASC")
   end
 
   def contact
@@ -23,6 +23,11 @@ class TupeloController < ApplicationController
   def designer
     @store = Store.find_by_name(@@city)
     @designer = Designer.find_by_name(params[:name].gsub('_', ' '))
-    @dresses = Dress.where(designer_id: @designer, location: @@city)
+    @city = @@city
+  end
+
+  def test
+    @store = Store.find_by_name(@@city)
+    @designers = Designer.where("location1 = ? OR location2 = ? OR location3 = ?", @@city, @@city, @@city)
   end
 end

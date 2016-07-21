@@ -4,6 +4,9 @@
 
   <h1>Listing Designers</h1>
 
+  <%= link_to 'New Designer', new_designer_path, class: 'btn btn-default' %>
+  <br>
+  <br>
   <table class="table">
     <thead>
       <tr>
@@ -22,7 +25,7 @@
         <tr>
           <td><%= designer.name %></td>
           <td><%= designer.description %></td>
-          <td>  <%= image_tag(designer.main_image.url, :class => "img-thumbnail") %></td>
+          <td>  <%= image_tag(designer.main_image.url(:thumb), :class => "img-thumbnail") %></td>
           <td><%= designer.location1 %></td>
           <td><%= designer.location2 %></td>
           <td><%= designer.location3 %></td>
@@ -34,7 +37,5 @@
     </tbody>
   </table>
 
-  <br>
 
-  <%= link_to 'New Designer', new_designer_path, class: 'btn btn-default' %>
 </div>

@@ -4,25 +4,25 @@
 
 	<div class="row no-bottom">
 		<div class="col-xs-12 designers">
-			<a href="http://www.daalarna.hu/" target="_blank" class="designer">Daalarna</a> 
+			<!-- <a href="http://www.daalarna.hu/" target="_blank" class="designer">Daalarna</a> 
 			<span class="designer">Something Blue</span> 
 			<a href="http://www.jesuspeiro.com/en/" target="_blank" class="designer">Jesus Piero</a> 
 			<a href="http://www.arieltaub.com" target="_blank" class="designer">Ariel Jennifer Taub</a> 
 			<a href="http://www.madeleinefig.com" target="_blank" class="designer">Madeline Fig</a> 
 			<a href="http://www.bertabridal.com" target="_blank" class="designer">Berta Bridal</a> 
+ -->
 
-
-
-			<!-- New Location Gallery below -->
+ 			<!-- New Location Gallery below -->
 			<% @designers.each do |designer| %>
 				<div class="col-xs-12 col-sm-4">
-					<%= link_to image_tag(designer.main_image.url, :alt => designer.name, :class => "designer-img"), nashville_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer-main' %>
+					<%= link_to image_tag(designer.main_image.url(:display), :alt => designer.name, :class => "designer-img"), nashville_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer-main' %>
 					<%= link_to designer.name, nashville_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer' %>
  				</div>
 			<% end %>
 			<!-- end -->
 
 
+		
 		</div>
 	</div>
 </div>

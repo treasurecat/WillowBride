@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Dress:</strong>
-  <%= @dress_image.dress_id %>
-</p>
+	<p>
+	  <strong>Dress:</strong>
+	  <%= Dress.find_by_id(@dress_image.dress_id).name %>
+	</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @dress_image.image %>
-</p>
+	<p>
+	  <strong>Image:</strong>
+	  <%= image_tag(@dress_image.image.url(:thumb), :class => "img-thumbnail") %>
+	</p>
 
-<%= link_to 'Edit', edit_dress_image_path(@dress_image) %> |
-<%= link_to 'Back', dress_images_path %>
+	<%= link_to 'Edit', edit_dress_image_path(@dress_image) %> |
+	<%= link_to 'Back', dress_images_path %>
+</div>

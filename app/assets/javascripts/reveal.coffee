@@ -25,10 +25,11 @@
   return
 ) jQuery
 win = $(window)
-win.load (event) ->
+$(document).ready (event) ->
   $('.reveal').each (i, el) ->
     `var el`
     el = $(el)
+    console.log(el.visible(true))
     if el.visible(true)
       el.addClass 'already-visible'
     return

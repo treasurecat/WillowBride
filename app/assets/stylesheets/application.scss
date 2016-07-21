@@ -168,6 +168,7 @@ p {
 		animation: pulse 1s;
 		align-items: center;
 		height: 100%;
+		max-height: 70px;
 	}
 
 	.menu {
@@ -333,7 +334,7 @@ a.city-title:hover {
 		font-family: $serif-font;
 		font-size: $h1-font-size;
 		letter-spacing: $h1-letter-sp;
-		color: #dae2e6;
+		color: $gold;
 	}
 
 	.arrow-circle {
@@ -390,9 +391,28 @@ a.city-title:hover {
 		font-size: 1em;
 	}
 
+	a.designer-main {
+		display: inline-block;
+		position: relative;
+    width: 100%;
+    overflow: hidden;
+	}
+	a.designer-main:before{
+		content: "";
+		display: inline-block;
+		padding-top: 100%; 	/* initial ratio of 1:1*/
+	}
+
 	.designer-img {
 		margin: 30px 0;
 		display: inline-block;
+		width: 160%;
+  	height: auto;
+  	position:  absolute;
+		top: -10%;
+		left: -30%;
+		bottom: 0;
+		right: 0;
 	}
 
 	.col-xs-12.col-sm-4 {
@@ -405,7 +425,7 @@ a.city-title:hover {
 		text-transform: uppercase;
 		font-family: $sans-font;
 		letter-spacing: $h1-letter-sp;
-		font-size: .75em;
+		font-size: $h1-font-size;
 		color: $blackish !important;
 	}
 
@@ -423,16 +443,50 @@ a.city-title:hover {
 	.designer-desc {
 		padding: 2em 0 0;
 		font-family: $serif-font;
+		line-height: 2em;
+		font-size: $h1-font-size;
 	}
 
 	.left-col {
 		text-align: right;
 		padding: 7px !important;
+		clear: both;
 	}
 
 	.right-col {
 		text-align: left;
 		padding: 7px !important;
+	}
+
+
+	.dress_contain {
+		display: inline-block;
+		clear: both;
+		position: relative;
+		margin: 7px 0;
+	}
+
+	.dress_name {
+		opacity: 0;
+
+		display: inline-block;
+		background: white;
+		width: 100%;
+		border: 1px solid $gold;
+		text-transform: uppercase;
+		color: $gold;
+		font-family: $sans-font;
+		font-size: .75em;
+		padding: 1.5em;
+		text-align: left;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	.dress_contain:hover .dress_name {
+		opacity: 1;
+		transition: opacity .5s;
 	}
 }
 
@@ -636,6 +690,15 @@ a.city-title:hover {
 	.experience p {
 		padding-right: 0em !important;
 	}
+
+	.dress_contain {
+		display: block !important;
+	}
+
+	.dress_contain .dress_name {
+		opacity: 1 !important;
+		transition: opacity .5s;
+	}
 }
 
 @media (max-width: 767px) {
@@ -670,6 +733,15 @@ a.city-title:hover {
 
 	.dress-img {
 		width: 100% !important;
+	}
+
+	
+}
+
+@media (max-width: 414px) {
+	.price {
+		float: left !important;
+		clear: both;
 	}
 }
 

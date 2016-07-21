@@ -32,15 +32,15 @@
   </div>
   <div class="field">
     <%= f.label :location1 %><br>
-    <%= f.select :location1, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location1, prompt: 'Select Location'}) %>
+    <%= f.select :location1, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location1}), {include_blank: true} %>
   </div>
   <div class="field">
     <%= f.label :location2 %><br>
-    <%= f.select :location2, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location2, prompt: 'Select Location'}) %>
+    <%= f.select :location2, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location2}), {include_blank: true} %>
   </div>
   <div class="field">
     <%= f.label :location3 %><br>
-    <%= f.select :location3, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location3, prompt: 'Select Location'}) %>
+    <%= f.select :location3, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location3}), {include_blank: true} %>
   </div>
   <div class="actions">
     <%= f.submit %>

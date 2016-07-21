@@ -26,3 +26,8 @@
 # Ignore application configuration
 /config/application.yml
 /config/*
+
+/public/system/designers
+/public/system/dress_images
+/public/system/dresses
+/public/system/stores

@@ -8,30 +8,82 @@
 
 				<div class="col-xs-12">
 					<h4 class="pull-left"><%= @designer.name %></h4>
-					<h4 class="pull-right"><%= @designer.price %></h4>
+					<h4 class="pull-right price"><%= @designer.price %></h4>
 				</div>
 				<div class="col-xs-12">
 					<p class="designer-desc"><%= @designer.description %></p>
 				</div>
 
 				<div style="height: 30px; width: 100%; clear: both;"></div>
+				<%
 
-				<% @dresses.each_with_index do |dress, index| %>
+					@dresses = []
 
-				<% if(index + 1) % 2 === 0 %>
-					<div class="col-xs-12 col-sm-6 pull-left left-col reveal">
-				<% else %>
-					<div class="col-xs-12 col-sm-6 pull-right right-col reveal">
-				<% end
+					Dress.where(designer_id: @designer, location: @city).each_with_index do |main_img|
+						@dresses.push(main_img)
+						DressImage.where(dress_id: main_img).limit(4).each do |additional_img|
+							@dresses.push(additional_img)
+						end
+					end
+
+				  @dresses_left, @dresses_right = @dresses.in_groups(2, false)
 				%>
-						<%= image_tag(dress.main_image.url, :alt => dress, :class => "dress-img") %>
-	 				</div>
-				<% end %>
+				
+				<div class="col-xs-12 col-sm-6 pull-left left-col">	
+
+					<% @dresses_left.each_with_index do |dress, index| %>
+
+						<% 
+							if defined?(dress.image)
+								@dress_img = dress.image.url(:display) 
+							else 
+								@dress_img = dress.main_image.url(:display) 
+							end
+
+							if defined?(dress.name)
+								@dress_name = dress.name 
+							end
+						%>
+
+						<div class="dress_contain reveal">
+							<%= image_tag(@dress_img, :alt => dress, :class => "dress-img") %>
+							<span class="dress_name"><%= @dress_name %></span>
+						</div>
+
+					<% end %>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 pull-right right-col">	
+					<% if !@dresses_right.blank? %>
+						<% @dresses_right.each_with_index do |dress, index| %>
+
+							<% 
+								if defined?(dress.image)
+									@dress_img = dress.image.url(:display) 
+								end
+								if defined?(dress.main_image)
+									@dress_img = dress.main_image.url(:display)
+								end
+
+								if defined?(dress.name)
+									@dress_name = dress.name
+								end
+							%>
+
+							<div class="dress_contain reveal">
+								<%= image_tag(@dress_img, :alt => dress, :class => "dress-img") %>
+								<span class="dress_name"><%= @dress_name %></span>
+							</div>
+
+						<% end %>
+					<% end %>
+				</div>
 
 			</div>		
 		</div>
 	</div>
 </div>
+
 
 <%= render partial: "nashville_footer" %>
 

@@ -41,4 +41,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Paperclip config:
+  Paperclip.options[:image_magick_path] = "/usr/local/Cellar/imagemagick/6.9.3-0_2"
+  Paperclip.options[:command_path] = "/usr/local/Cellar/imagemagick/6.9.3-0_2"
 end

@@ -5,7 +5,7 @@
 	<div class="row no-bottom">
 		<div class="col-xs-12 designers">
 			<div class="col-xs-12 display-container">
-					<a href="http://www.jennyyoo.com" target="_blank" class="designer">Jenny Yoo</a> 
+					<!-- <a href="http://www.jennyyoo.com" target="_blank" class="designer">Jenny Yoo</a> 
 					<a href="http://www.jennyyoo.com" target="_blank" class="designer">Jenny Yoo Bridesmaids</a> 
 					<a href="http://www.clairelafaye.com" target="_blank" class="designer">Claire La Faye</a> 
 					<a href="http://clairepettibone.com" target="_blank" class="designer">Claire Pettibone Couture</a> 
@@ -13,16 +13,17 @@
 					<a href="http://www.essensedesigns.com/stella-york/" target="_blank" class="designer">Stella York</a> 
 					<a href="http://www.jlmcouture.com/Alvina-Valenta/Bridal" target="_blank" class="designer">Alvina Valenta</a> 
 					<a href="http://www.jlmcouture.com/Blush-Hayley-Paige/Bridal" target="_blank" class="designer">Blush by Hayley Paige</a> 
-					<a href="http://theiacouture.com/collections/bridal/lookbook" target="_blank" class="designer">Theia</a> 
+					<a href="http://theiacouture.com/collections/bridal/lookbook" target="_blank" class="designer">Theia</a>  -->
 
 					<!-- New Location Gallery below -->
 					<% @designers.each do |designer| %>
 						<div class="col-xs-12 col-sm-4">
-							<%= link_to image_tag(designer.main_image.url, :alt => designer.name, :class => "designer-img"), whitefish_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer-main' %>
+							<%= link_to image_tag(designer.main_image.url(:display), :alt => designer.name, :class => "designer-img"), whitefish_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer-main' %>
 							<%= link_to designer.name, whitefish_designers_name_path(@designer, :name => designer.name.gsub(' ', '_' )), :class => 'designer' %>
 		 				</div>
 					<% end %>
 					<!-- end -->
+
 			</div>
 		</div>
 	</div>
