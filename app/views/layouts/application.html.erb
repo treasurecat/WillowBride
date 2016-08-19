@@ -8,6 +8,11 @@
   <%= csrf_meta_tags %>
   <script src="https://use.typekit.net/mdx2jvk.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <title>
+    <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+    Willow Bride
+  </title>
+  <meta name="description" content="Willow Bride offers a thoughtfully curated collection of unusual and beautiful gowns and accessories. Visit our bridal stores in Nashville, TN, Tupelo, MS and Whitefish, MT. Let your love and creativity flow into every detail on your wedding day, beginning at Willow Bride." />
 </head>
 <body>
 <% if params[:controller] != "welcome" %>
