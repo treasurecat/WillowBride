@@ -5,6 +5,8 @@
   <title>Willow Bride <%= if content_for?(:title) then ' | ' + yield(:title) end %></title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
   
  
@@ -24,7 +26,6 @@
 <script src="https://use.typekit.net/mdx2jvk.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
