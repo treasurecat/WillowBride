@@ -157,7 +157,8 @@ p {
 	margin: 0em auto;
 	position: relative;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
+
 
 	> a {
 		margin: 0px auto;
@@ -169,6 +170,8 @@ p {
 		align-items: center;
 		height: 100%;
 		max-height: 70px;
+		text-align: center;
+		margin: 0px auto;
 	}
 
 	.menu {

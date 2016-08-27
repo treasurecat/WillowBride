@@ -9,7 +9,7 @@ class Dress < ActiveRecord::Base
   validates :location, presence: true
   validates :name, presence: true, length: { minimum: 2 }
 
-  has_attached_file :main_image, styles: { display: ["800x600>", :png], thumb: ["300x200>", :png] }
+  has_attached_file :main_image, styles: { display: ["800x600>", :png], thumb: ["300x200>", :png] }, :convert_options => { :display => "-quality 70 -interlace Plane", :thumb => "-quality 70 -interlace Plane" }
   validates_attachment :main_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
 end
