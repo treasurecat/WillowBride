@@ -1,5 +1,5 @@
 class DesignersController < ApplicationController
-  before_action :authenticate_user!
+#  before_action :authenticate_user!
   before_action :set_designer, only: [:show, :edit, :update, :destroy]
 
   # GET /designers
@@ -20,6 +20,7 @@ class DesignersController < ApplicationController
 
   # GET /designers/1/edit
   def edit
+    @dresses = Dress.where("designer_id", @designer).order("updated_at DESC")
   end
 
   # POST /designers

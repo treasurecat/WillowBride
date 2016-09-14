@@ -4,5 +4,10 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Back', designers_path %>
+	<p class="col-sm-12">
+		<%= link_to designers_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %>
+		<br /><br />
+	</p>
 </div>
