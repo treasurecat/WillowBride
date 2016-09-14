@@ -71,14 +71,7 @@
       <%= f.text_field :collection %>    </div>
   </fieldset>
 
-  <h2>Dress Images</h2>
-  <p>
-  <%= f.fields_for(:dress_images) do |dress_images_form| %>
-    <%= dress_images_form.label :name %>
-    <%= dress_images_form.text_field :name %><br>
-    <%= dress_images_form.label :collection %>
-    <%= dress_images_form.datetime_select :collection %><br>
-  <% end %>
+  
 
   <p>
 

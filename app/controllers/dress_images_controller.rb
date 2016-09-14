@@ -1,5 +1,5 @@
 class DressImagesController < ApplicationController
-#  before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_dress_image, only: [:show, :edit, :update, :destroy]
 
   # GET /dress_images

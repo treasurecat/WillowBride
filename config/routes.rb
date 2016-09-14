@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  resources :stores
+  resources :designers
   resources :dress_images
   resources :dresses
   resources :designers
+  resources :admin
   devise_for :users
+
   get 'nashville/index'
 
   get 'tupelo/index'
@@ -11,8 +15,6 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  resources :stores
-  resources :designers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -68,6 +70,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  match "/admin", to: "admin#index", :via => 'get'
 
   match "/whitefish", to: "whitefish#index", :via => 'get'
   match "/tupelo", to: "tupelo#index", :via => 'get'

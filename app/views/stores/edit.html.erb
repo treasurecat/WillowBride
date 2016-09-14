@@ -4,7 +4,13 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @store %> |
-	<%= link_to 'Back', stores_path %>
+	<p>
+		<%= link_to stores_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+		<%= link_to @store do %>
+			Show <i class="glyphicon glyphicon-star"></i>
+		<% end %>
+	</p>
 
 </div>
