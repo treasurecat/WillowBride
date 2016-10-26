@@ -20,7 +20,7 @@ class DesignersController < ApplicationController
 
   # GET /designers/1/edit
   def edit
-    @dresses = Dress.where("designer_id", @designer.id).order("updated_at DESC")
+    @dresses = Dress.where(@designer.id).order("updated_at DESC")
   end
 
   # POST /designers
