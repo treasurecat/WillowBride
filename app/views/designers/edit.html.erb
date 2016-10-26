@@ -4,7 +4,13 @@
 
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @designer %> |
-	<%= link_to 'Back', designers_path %>
+	<p>
+		<%= link_to designers_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to @designer, class: "" do %>
+			Show <i class="glyphicon glyphicon-star"></i>
+		<% end %>
+	</p>
 
 </div>

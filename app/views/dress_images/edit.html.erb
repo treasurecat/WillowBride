@@ -2,7 +2,13 @@
 	<h1>Editing Dress Image</h1>
 
 	<%= render 'form' %>
-
-	<%= link_to 'Show', @dress_image %> |
-	<%= link_to 'Back', dress_images_path %>
+	
+	<p>
+		<%= link_to dress_images_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to @dress_image, class: "" do %>
+			Show <i class="glyphicon glyphicon-star"></i>
+		<% end %>
+	</p>
 </div>

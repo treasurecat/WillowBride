@@ -11,6 +11,13 @@
 	  <%= image_tag(@dress_image.image.url(:thumb), :class => "img-thumbnail") %>
 	</p>
 
-	<%= link_to 'Edit', edit_dress_image_path(@dress_image) %> |
-	<%= link_to 'Back', dress_images_path %>
+	<br /><br />
+  <p>
+		<%= link_to dress_images_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to edit_dress_image_path(@dress_image), class: "" do %>
+			Edit <i class="glyphicon glyphicon-edit"></i>
+		<% end %>
+	</p>
 </div>

@@ -20,6 +20,7 @@ class DressesController < ApplicationController
 
   # GET /dresses/1/edit
   def edit
+    @dress_images = DressImage.where("dress_id", @dress).order("updated_at DESC")
   end
 
   # POST /dresses

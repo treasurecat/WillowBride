@@ -35,7 +35,13 @@
     <strong>Location3:</strong>
     <%= @designer.location3 %>
   </p>
-
-  <%= link_to 'Edit', edit_designer_path(@designer) %> |
-  <%= link_to 'Back', designers_path %>
+  <br /><br />
+  <p>
+		<%= link_to designers_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to edit_designer_path(@designer), class: "" do %>
+			Edit <i class="glyphicon glyphicon-edit"></i>
+		<% end %>
+	</p>
 </div>

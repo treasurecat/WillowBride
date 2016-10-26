@@ -11,19 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :dress_id %><br>
-    <% @dress_collection = Dress.all.collect {|s| [ s.name + ' - ' + s.location, s.id ] } %>
-    <%= f.select :dress_id, options_for_select(@dress_collection.reverse, {:selected => @dress_image.dress_id, prompt: 'Select Dress'}) %>
-  </div>
+  <fieldset class="well">
+    <div class="form-group col-sm-4">
+      <%= f.label :dress_id %><br>
+      <% @dress_collection = Dress.all.collect {|s| [ s.name + ' - ' + s.location, s.id ] } %>
+      <%= f.select :dress_id, options_for_select(@dress_collection.reverse, {:selected => @dress_image.dress_id, prompt: 'Select Dress'}) %>
+    </div>
 
-  <%= image_tag(@dress_image.image.url, :class => "img-thumbnail") %>
+    <div class="form-group col-sm-8">
+      <div class="col-sm-3">
+        <%= image_tag(@dress_image.image.url, :class => "img-thumbnail") %>
+      </div>
 
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="file col-sm-9">
+        <%= f.label :image %><br>
+        <%= f.file_field :image, :class => 'file file-custom' %>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <fieldset class="form-group text-center">
+    <%= f.submit :class => 'btn btn-default' %>
+  </fieldset>
 <% end %>

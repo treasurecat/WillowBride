@@ -1,0 +1,48 @@
+<%= form_for(@designer) do |f| %>
+  <% if @designer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@designer.errors.count, "error") %> prohibited this designer from being saved:</h2>
+
+      <ul>
+      <% @designer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_area :price %>
+  </div>
+    
+  <%= image_tag(@designer.main_image.url, :class => "img-thumbnail") %>
+
+  <div class="field">
+    <%= f.label :main_image %><br>
+    <%= f.file_field :main_image %>
+  </div>
+  <div class="field">
+    <%= f.label :location1 %><br>
+    <%= f.select :location1, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location1}), {include_blank: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :location2 %><br>
+    <%= f.select :location2, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location2}), {include_blank: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :location3 %><br>
+    <%= f.select :location3, options_for_select(Store.all.collect {|s| [ s.name ] }, {:selected => @designer.location3}), {include_blank: true} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

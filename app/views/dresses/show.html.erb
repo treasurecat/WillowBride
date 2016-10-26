@@ -47,6 +47,13 @@
     <%= @dress.collection %>
   </p>
 
-  <%= link_to 'Edit', edit_dress_path(@dress) %> |
-  <%= link_to 'Back', dresses_path %>
+  <br /><br />
+  <p>
+		<%= link_to dresses_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to edit_dress_path(@dress) do %>
+			Edit <i class="glyphicon glyphicon-edit"></i>
+		<% end %>
+	</p>
 </div>
