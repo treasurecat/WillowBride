@@ -236,8 +236,14 @@ a.city-title:hover {
 .pinit {
 	position: absolute;
 	top: 10px;
-	left: 0px;
+	left: 10px;
 	width: 30px;
+	cursor: pointer;
+}
+
+.pinit:hover {
+	opacity: .5;
+	transition: opacity .3s;
 }
 
 
