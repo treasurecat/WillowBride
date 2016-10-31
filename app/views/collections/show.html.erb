@@ -1,0 +1,25 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Collection:</strong>
+    <%= @collection.collection %>
+  </p>
+
+  <p>
+    <strong>Designer:</strong>
+    <%= Designer.find_by_id(@collection.designer_id).name %>
+  </p>
+
+ 
+  <br /><br />
+  <p>
+		<%= link_to collections_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to edit_collection_path(@collection), class: "" do %>
+			Edit <i class="glyphicon glyphicon-edit"></i>
+		<% end %>
+	</p>
+</div>

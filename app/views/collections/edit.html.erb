@@ -1,0 +1,16 @@
+<div class="container">
+
+	<h1>Editing Collection</h1>
+
+	<%= render 'form' %>
+
+	<p>
+		<%= link_to collections_path, class: "" do %>
+			<i class="glyphicon glyphicon-hand-left"></i> Back
+		<% end %> &nbsp;|&nbsp;
+    <%= link_to @collection, class: "" do %>
+			Show <i class="glyphicon glyphicon-star"></i>
+		<% end %>
+	</p>
+
+</div>

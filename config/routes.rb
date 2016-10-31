@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  get 'collections/edit'
+
+  get 'collections/new'
+
+  get 'collections/index'
+
+  get 'collections/show'
+
   resources :stores
   resources :designers
   resources :dress_images
   resources :dresses
   resources :designers
+  resources :collections
   resources :admin
   devise_for :users
 

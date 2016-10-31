@@ -1,0 +1,31 @@
+<%= form_for(@collection) do |f| %>
+  <% if @collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+
+      <ul>
+      <% @collection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset class="well">
+    <div class="form-group col-sm-4">
+      <%= f.label :designer_id %><br>
+      <%= f.select :designer_id, options_for_select(Designer.all.collect {|s| [ s.name, s.id ] } , {:selected => @collection.designer_id, prompt: 'Select Designer'}) %>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <%= f.label :collection %><br>
+      <%= f.text_field :collection %>
+    </div>
+
+
+  </fieldset>
+
+  <fieldset class="form-group text-center">
+    <%= f.submit :class => 'btn btn-default' %>
+  </fieldset>
+<% end %>
