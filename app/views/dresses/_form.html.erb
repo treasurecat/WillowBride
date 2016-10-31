@@ -67,10 +67,10 @@
       <%= f.text_field :tag %>
     </div>
     <div class="form-group col-sm-4 text-center">
-      <%= f.label :collection %><br>
-      <%= f.text_field :collection %>    
       <%# f.label :collection %><br>
-      <%# f.select :collection, options_for_select(Collection.where("designer_id": @dress.designer.id).all.collect {|s| [ s.collection ] } , {:selected => @dress.collection, prompt: 'Select Collection'}) %>
+      <%# f.text_field :collection %>    
+      <%= f.label :collection %><br>
+      <%= f.select :collection, options_for_select(Collection.where("designer_id": @dress.designer.id).all.collect {|s| [ s.collection ] } , {:selected => @dress.collection, prompt: 'Select Collection'}) %>
       <%= link_to '+ Add New Collection', new_collection_path %>
 
     </div>
