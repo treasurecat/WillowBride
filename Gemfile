@@ -72,5 +72,5 @@ group :production, :staging do
   gem "pg"
 end
 
-ruby "2.2.3"
+ruby "2.2.6"
 
