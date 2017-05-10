@@ -104,19 +104,19 @@
 
   <p><hr /></p>
 
-  <% if @dresses.present? %>
-    <div class="">
+  <%# if @dresses.present? %>
+   <!--  <div class="">
       <div class="panel panel-default">
-      <div class="panel-heading">Dresses by <%= @designer.name %></div>
+      <div class="panel-heading">Dresses by <%#= @designer.name %></div>
         <ol class="list-group">
 
-            <% @dresses.each do |dress| %>
-              <li class="list-group-item"><%= link_to image_tag(dress.main_image.url, :class => "img-thumbnail"), edit_dress_path(dress) %> <%= link_to dress.name, edit_dress_path(dress) %></li>
-            <% end %>
+            <%# @dresses.each do |dress| %>
+              <li class="list-group-item"><%#= link_to image_tag(dress.main_image.url, :class => "img-thumbnail"), edit_dress_path(dress) %> <%#= link_to dress.name, edit_dress_path(dress) %></li>
+            <%# end %>
 
         </ol>
-      </div>
-    <% end %>
+      </div> -->
+    <%# end %>
 
     <p class="text-center">
     <%= link_to new_dress_path(:designer_id => @designer.id), class: "btn btn-default" do %>
