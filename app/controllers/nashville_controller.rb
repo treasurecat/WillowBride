@@ -7,7 +7,7 @@ class NashvilleController < ApplicationController
   def index
   	@store = Store.find_by_name(@@city)
 
-    client = Instagram.client(:access_token => '1517317818.1677ed0.daa3778c68b149cc82e9608c931a59d6')
+    client = Instagram.client(:access_token => '3015172621.d859002.dadf9728deec46c1b1fa8bba731a39e8')
     @insta = client.present? ? client.user_recent_media : ''
   end
 
