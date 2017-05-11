@@ -43,7 +43,7 @@
 				<% @insta.each do |insta| %>
 				  <div class="col-xs-6 col-sm-3">
 				    <div class="thumbnail">
-				      <a href="<%#= insta.link %>" target="_blank">
+				      <a href="<%= insta.link %>" target="_blank">
 				      	<%= image_tag insta.images.thumbnail.url %>
 				      </a>
 				    </div>
