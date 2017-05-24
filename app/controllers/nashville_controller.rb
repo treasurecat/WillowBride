@@ -1,9 +1,14 @@
+require 'instagram'
+
 class NashvilleController < ApplicationController
 
   @@city = "Nashville, Tennessee"
 
   def index
   	@store = Store.find_by_name(@@city)
+
+    client = Instagram.client(:access_token => '3015172621.d859002.dadf9728deec46c1b1fa8bba731a39e8')
+    @insta = client.present? ? client.user_recent_media : ''
   end
 
   def experience

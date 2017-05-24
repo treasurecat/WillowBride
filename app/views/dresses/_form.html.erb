@@ -67,8 +67,18 @@
       <%= f.text_field :tag %>
     </div>
     <div class="form-group col-sm-4 text-center">
+      <%# f.label :collection %><br>
+      <%# f.text_field :collection %>    
       <%= f.label :collection %><br>
-      <%= f.text_field :collection %>    </div>
+      <% if @dress.designer %>
+      <%= f.select :collection, options_for_select(Collection.where("designer_id": @ddid).all.collect {|s| [ s.collection ] } , {:selected => @dress.collection, prompt: 'Select Collection'}) %>
+      <% else %>
+      <%= f.select :collection, options_for_select(Collection.all.collect {|s| [ s.collection ] } , {:selected => @dress.collection, prompt: 'Select Collection'}) %>
+      <% end %>
+      <br />
+      <%= link_to '+ Add New Collection', new_collection_path, target: "_blank" %>
+
+    </div>
   </fieldset>
 
   

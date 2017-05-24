@@ -15,7 +15,7 @@
 <% if params[:controller] != "welcome" %>
   <div class="page-container">
 <% end %>
-
+    <%= render 'layouts/messages' %>
 		<%= yield %>
 
 <% if params[:controller] != "welcome" %>
@@ -36,6 +36,8 @@
   ga('send', 'pageview');
 
 </script>
+
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 </body>
 </html>

@@ -22,7 +22,7 @@
           <td><%= image_tag(dress_image.image.url(:thumb), :class => "img-thumbnail") %></td>
           <td><%= link_to 'Show', dress_image %></td>
           <td><%= link_to 'Edit', edit_dress_image_path(dress_image) %></td>
-          <td><%= link_to 'Destroy', dress_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', dress_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
