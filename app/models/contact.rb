@@ -11,8 +11,7 @@ class Contact < MailForm::Base
     {
       :subject => "Willow Bride Contact Form",
       :to => %("#{recipient}"),
-      :from => %("no-reply@willowbride.com"),
-      :reply_to => %("#{sender}")
+      :from => %("Willow Bride" "no-reply@willowbride.com")
     }
   end
 end
